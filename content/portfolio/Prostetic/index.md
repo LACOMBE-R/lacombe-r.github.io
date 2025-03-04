@@ -3,9 +3,8 @@ image = "img/portfolio/Prostetic/poster.webp"
 showonlyimage = false
 date = "2016-11-05T19:44:32+05:30"
 title = "Prothèse sur-mesure"
-draft = false
-weight = 2
 draft = true
+weight = 2
 +++
 
 Création d'une prothèse de doigt sur mesure
