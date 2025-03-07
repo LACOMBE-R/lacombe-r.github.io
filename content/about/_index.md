@@ -13,7 +13,7 @@ La nécessité de **m'exprimer artistiquement** est aussi un trait qui me défin
 
 J'ai à cœur, à travers mes projets personnels, d'explorer la **convergence** de ces deux dimensions : **l'art et la technique**.
 
-Actuellement étudiant à Amiens, en école d'ingénieurs dans le domaine de l'industrie et de la robotique, j'aspire à **donner du sens à mon futur métier** en obtenant des clés concrètes pour porter des projets **éco-responsables** et **éthiques** en réponse directe aux problématiques d'aujourd'hui et de demain.
+C’est dans cet esprit qu’est née **Addastra**, un atelier dédiée à la **recherche et développement technique** dans les domaines de l’**art** et de la **magie**. À travers Addastra, je mets mes compétences techniques au service des **artistes** pour faire de leurs idées une réalité.
 
 ### Curriculum
 
