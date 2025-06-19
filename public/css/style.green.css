@@ -389,13 +389,13 @@ SIDEBAR + RIGHT COLUMN
 }
 
 .sidebar-heading {
-  font-size: 18px;
+  font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .sidebar-heading a {
-  color: #000;
+  color: #2b7551;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -409,8 +409,14 @@ SIDEBAR + RIGHT COLUMN
 }
 
 .sidebar-p {
-  color: #999999;
+  color: #555555;
   font-size: 14px;
+}
+
+.sidebar-p-bold {
+  color: #999999;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .sidebar-menu {
@@ -485,7 +491,7 @@ SIDEBAR + RIGHT COLUMN
 
 .content-column-content p,
 .content-column-content li {
-  color: #999999;
+  color: #555555;
 }
 
 .content-column-content ul li {
@@ -810,7 +816,7 @@ MAIN PORTFOLIO SLIDER
 }
 
 #main-slider .owl-wrapper-outer {
-  box-shadow: 0 1px 5px #e7e7e7;
+  box-shadow: 0 1px 5px #efefef;
 }
 
 #main-slider .owl-controls .owl-buttons {
@@ -984,7 +990,7 @@ a:active {
   background: #fff;
   margin-bottom: 30px;
   position: relative;
-  box-shadow: 0 0 5px #e7e7e7;
+  box-shadow: 0 0 5px #efefef;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -1087,7 +1093,7 @@ a:active {
   display: block;
   position: relative;
   min-height: 100px;
-  background: #8f0e0e;
+  background: #efefef;
 }
 
 .box-masonry .box-masonry-image.with-hover-overlay:before {
@@ -1770,7 +1776,7 @@ STYLE SWITCHER FOR DEMO
 .navbar-default .navbar-nav>.disabled>a,
 .navbar-default .navbar-nav>.disabled>a:hover,
 .navbar-default .navbar-nav>.disabled>a:focus {
-  color: #e7e7e7;
+  color: #cccccc;
   background-color: transparent;
 }
 
@@ -1819,7 +1825,7 @@ STYLE SWITCHER FOR DEMO
   .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a,
   .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus {
-    color: #e7e7e7;
+    color: #cccccc;
     background-color: transparent;
   }
 }
@@ -1837,7 +1843,7 @@ STYLE SWITCHER FOR DEMO
   z-index: 1000;
   font-size: 14px;
   background-color: #ffffff;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
 }
@@ -1946,7 +1952,7 @@ hr {
 
 .breadcrumb>li+li:before {
   content: "/\00a0";
-  color: #e7e7e7;
+  color: #cccccc;
 }
 
 .breadcrumb>.active {
@@ -2126,7 +2132,7 @@ label {
   color: #555555;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #cccccc;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -2298,7 +2304,7 @@ h6,
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #555555;
+  color: #2b7551;
 }
 
 h1,

@@ -1,9 +1,9 @@
 +++
-image = "img/portfolio/Prostetic/poster.webp"
+image = "img/portfolio/Prostetic/Prostetic.png"
 showonlyimage = false
 date = "2016-11-05T19:44:32+05:30"
 title = "Prothèse sur-mesure"
-draft = true
+draft = false
 weight = 2
 +++
 
@@ -40,7 +40,7 @@ Bien sûr, il faut un peu d'imagination, mais cela est plus clair lorsque que l'
 Plusieurs itérations ont été nécessaires pour s'adapter au mieux au doigt d'Adrien.
 Ce processus a été accéléré grâce à l'impression 3D. La prothèse sera finalement imprimée en résine pour plus de confort et d'esthétique.
 
-{{< vid_PROSTETIC >}}
+{{< video src="/img/portfolio/Prostetic/prostetic.mp4" title="Vidéo démo prothèse" >}}
 
 ---
 

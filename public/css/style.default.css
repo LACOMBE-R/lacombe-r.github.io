@@ -485,7 +485,7 @@ SIDEBAR + RIGHT COLUMN
 
 .content-column-content p,
 .content-column-content li {
-  color: #999999;
+  color: #555555;
 }
 
 .content-column-content ul li {
@@ -810,7 +810,7 @@ MAIN PORTFOLIO SLIDER
 }
 
 #main-slider .owl-wrapper-outer {
-  box-shadow: 0 1px 5px #e7e7e7;
+  box-shadow: 0 1px 5px #ccc;
 }
 
 #main-slider .owl-controls .owl-buttons {
@@ -984,7 +984,7 @@ a:active {
   background: #fff;
   margin-bottom: 30px;
   position: relative;
-  box-shadow: 0 0 5px #e7e7e7;
+  box-shadow: 0 0 5px #ccc;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -1087,7 +1087,7 @@ a:active {
   display: block;
   position: relative;
   min-height: 100px;
-  background: #e7e7e7;
+  background: #ccc;
 }
 
 .box-masonry .box-masonry-image.with-hover-overlay:before {
@@ -2298,7 +2298,7 @@ h6,
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #000000;
+  color: #ef5285;
 }
 
 h1,

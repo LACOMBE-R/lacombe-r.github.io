@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Rémi Lacombe</title>
+    <link>http://localhost:1313/portfolio/</link>
+    <description>Recent content in Portfolios on Rémi Lacombe</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Addastra</title>
+      <link>http://localhost:1313/portfolio/addastra/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/addastra/</guid>
+      <description>&lt;p&gt;Auto-entreprise de R&amp;amp;D pour le monde de la scénographie, de l&amp;rsquo;art et de la scène.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coupe de France de Robotique</title>
+      <link>http://localhost:1313/portfolio/cdr/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/cdr/</guid>
+      <description>&lt;p&gt;Un événement exceptionnel, un cahier des charges strict et 6 mois de création !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prothèse sur-mesure</title>
+      <link>http://localhost:1313/portfolio/prostetic/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/prostetic/</guid>
+      <description>&lt;p&gt;Création d&amp;rsquo;une prothèse de doigt sur mesure&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flèches à apparition – dispositif scénique</title>
+      <link>http://localhost:1313/portfolio/popup_arrows/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/portfolio/popup_arrows/</guid>
+      <description>&lt;p&gt;Développement d’un ensemble de flèches à apparition, pour une illusion scénique dans une comédie musicale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Télécommande IoT</title>
+      <link>http://localhost:1313/portfolio/ir_remote/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/ir_remote/</guid>
+      <description>&lt;p&gt;Faire entrer un ampli vieillissant dans le 21ème siècle en créant une télécommande infrarouge connectée.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fraiseuse CNC</title>
+      <link>http://localhost:1313/portfolio/cnc/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/cnc/</guid>
+      <description>&lt;p&gt;Construction d&amp;rsquo;une fraiseuse à commande numérique&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stage chez Francofil</title>
+      <link>http://localhost:1313/portfolio/francofil/</link>
+      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/francofil/</guid>
+      <description>&lt;p&gt;Stage ouvrier en 2021&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stage chez Actemium</title>
+      <link>http://localhost:1313/portfolio/actemium/</link>
+      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/actemium/</guid>
+      <description>&lt;p&gt;Stage de découverte en 2018&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Engagement chez les Scouts et Guides de France</title>
+      <link>http://localhost:1313/portfolio/sgdf/</link>
+      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/sgdf/</guid>
+      <description>&lt;p&gt;Animateur pour les 8-11 ans&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
