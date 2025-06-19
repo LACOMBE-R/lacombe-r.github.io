@@ -6,7 +6,7 @@
     <description>Recent content on Rémi Lacombe</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 17 Jun 2025 10:00:00 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Addastra</title>
@@ -28,6 +28,13 @@
       <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
       <guid>http://localhost:1313/portfolio/prostetic/</guid>
       <description>&lt;p&gt;Création d&amp;rsquo;une prothèse de doigt sur mesure&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OTTO-MKS : un robot éducatif open-source pour la 1ère année</title>
+      <link>http://localhost:1313/portfolio/otto-mks/</link>
+      <pubDate>Tue, 17 Jun 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/portfolio/otto-mks/</guid>
+      <description>&lt;p&gt;Développer un robot pédagogique open-source et évolutif pour initier les étudiants de première année à la robotique, à la fabrication numérique et à la programmation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Flèches à apparition – dispositif scénique</title>

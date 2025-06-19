@@ -1,6 +1,6 @@
 +++
 draft = false
-image = "img/portfolio/Popup_Arrows/ARROW_BASE.jpg"
+image = "img/portfolio/Popup_Arrows/icon.gif"
 date = "2025-02-15T00:00:00+02:00"
 title = "Flèches à apparition – dispositif scénique"
 weight = 3
@@ -79,6 +79,7 @@ Le hub est configuré par **DIP switches** pour définir l’adresse de départ,
 Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.
 
 ![Vues DMX Hub](/img/portfolio/Popup_Arrows/DMX_Hub_2.png)
+
 ---
 
 ## Intégration scénique
@@ -103,7 +104,7 @@ Les bases sont conçues pour être **dissimulées** en position couchée dans un
 
 >#### Outils logiciels
 >
->- **Onshape** (CAO des bases)
+>- **Onshape** (CAO)
 >- **Chataigne** (Tests et développement)
 
 ---
