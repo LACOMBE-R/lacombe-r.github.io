@@ -1,12 +1,12 @@
 +++
 draft = false
-image = "img/portfolio/OTTO-MKS/Icon.png"
+image = "img/portfolio/OTTO-MKS/icon.png"
 date = "2025-06-17T10:00:00+01:00"
-title = "OTTO-MKS : un robot éducatif open-source pour la 1ère année"
+title = "OTTO-MKS : un robot éducatif "
 weight = 3
 +++
 
-Développer un robot pédagogique open-source et évolutif pour initier les étudiants de première année à la robotique, à la fabrication numérique et à la programmation.
+Développer un robot pédagogique open-source pour faire découvrir la robotique, la fabrication numérique et la programmation embarquée aux étudiant·e·s en première année d'école d'ingénieur ? C’est exactement ce qu’on a fait.
 
 <!--more-->
 
@@ -14,65 +14,55 @@ Développer un robot pédagogique open-source et évolutif pour initier les étu
 
 ## Présentation
 
-Ce projet s’inscrit dans le cadre de mon **projet de fin d'étude** au sein du **MakerSpace d'UniLaSalle Amiens**, avec pour objectif général d’améliorer l’expérience des étudiants dans l’espace, notamment à travers des projets pédagogiques engageants.
+Ce projet s’inscrit dans le cadre de mon **projet de fin d'étude** au sein du **MakerSpace d'UniLaSalle Amiens**. L’un de mes objectifs était de repenser entièrement les enseignements technologiques des premières années, en créant des projets concrets, motivants et accessibles.
 
-Le projet **OTTO-MKS** est né d’un constat : les enseignements techniques de première année, répartis jusque-là en plusieurs modules isolés (mécanique, électronique, développement web), manquaient de cohérence et de transversalité. L’idée a donc été de concevoir un projet unique, fédérateur et concret, permettant d’aborder plusieurs compétences dans un format motivant : **la conception, la fabrication et la personnalisation d’un robot bipède.**
-
-Ce robot, destiné à être assemblé, programmé et modifié par les étudiants, est une **version améliorée du robot OTTO original**, un projet open-source largement diffusé à l’international.
+Plutôt que d’enchaîner les modules isolés de méca, d’élec ou de dev web, j’ai proposé un fil rouge commun : **concevoir, fabriquer et programmer un robot bipède personnalisable**, pour explorer toutes ces compétences de manière intégrée et ludique.
 
 ---
 
-## Le robot OTTO original
+### Le robot OTTO original
 
 ![Otto-original](/img/portfolio/OTTO-MKS/Otto.png)
 
-Le robot OTTO est un petit robot open-source conçu pour l’initiation à la robotique. Il est constitué :
-- d’une **carte Arduino Nano** (le “cerveau” du robot),
-- de **quatre servomoteurs** pour animer les jambes et les pieds,
-- d’un **capteur ultrason** HC-SR04 pour détecter les obstacles,
-- d’un **buzzer** pour émettre des sons,
-- et d’une alimentation par **piles AA**.
+Le robot OTTO est un petit robot open-source très répandu dans l’éducation. Il est conçu autour d’une carte Arduino Nano, de quatre servos, d’un capteur ultrason, et de quelques composants simples. Il marche, danse, évite les obstacles, et se programme en Arduino ou via Blockly.
 
-Il peut marcher, danser, reculer, détecter les murs et se programme en Arduino ou en Blockly. Il est particulièrement apprécié pour son accessibilité dans les milieux éducatifs.
+Il a servi de point de départ… mais **beaucoup de choses méritaient d’être améliorées** pour l’adapter à un usage pédagogique moderne.
 
 ---
 
-## Le projet OTTO-MKS
+### Le projet OTTO-MKS
 
-### Adaptation mécanique
+#### Adaptation mécanique
 
-La version **OTTO-MKS** conserve l’esprit du robot original mais en corrige plusieurs limitations, tout en restant **open-source**. Toutes les pièces ont été **modélisées sous Onshape**, une plateforme de CAO collaborative, afin que les étudiants puissent dupliquer, modifier et personnaliser leur robot.
+Le design du robot a été entièrement repensé pour les besoins de l’enseignement :  
+**moins de pièces, un montage rapide, et une architecture facile à modifier ou réparer.** Toutes les pièces sont modélisées sur Onshape pour permettre aux étudiant·e·s de les adapter eux-mêmes en ligne, sans installation ni prérequis.
 
-Les principales améliorations :
-- **Commutateur On/Off** déplacé sur le dessus (plus pratique que celui d’origine, situé sous le robot),
-- **Fixation simplifiée** du capteur ultrason grâce à des connecteurs coudés sur mesure,
-- Réduction du nombre de pièces et **assemblage possible avec une seule vis**,
-- Intégration mécanique pensée pour faciliter les réparations, modifications et essais.
+![Otto-MKS](/img/portfolio/OTTO-MKS/Otto-MKS-EXPLODED.png)
 
-### Choix électroniques
+Le robot devient un vrai support d’expérimentation : on peut l’assembler en quelques minutes, l’ouvrir, le modifier, et surtout **le comprendre.**
+
+#### Choix électroniques
 
 - **Microcontrôleur : XIAO ESP32-C3**  
-  → Compact, abordable (~4 €), Wi-Fi/Bluetooth intégré, compatible Arduino.
-- **Alimentation : pile 9V rechargeable en USB-C**  
-  → Recharge facile, câblage minimal.
-- **Carte électronique dédiée** co-développée avec Adrien Bracq  
-  → Organisation claire des branchements, évite les erreurs fréquentes chez les débutants.
-
-### Itérations & prototypage
-
-Le projet s’est étalé sur environ **quatre mois**, avec plusieurs versions testées et améliorées à partir du modèle OTTO original. Chaque modification est née d’une observation concrète : difficulté d’accès à un bouton, problème de câblage, temps de montage excessif, etc.
+  → Ultra compact, Wi-Fi/Bluetooth intégrés, compatible Arduino, pour moins de 5 €.
+- **Alimentation : pile 9V Li-ion rechargeable en USB-C**  
+  → Autonomie suffisante, recharge facile, pas besoin de piles jetables.
+- **Carte électronique dédiée (design KiCad)**  
+  → Organisation claire des branchements, connecteurs bien identifiés, fini les câblages erronés en TP.  
+  (Et c’est très satisfaisant de concevoir son propre PCB 👌)
 
 ---
 
-## Documentation et diffusion
+### Documentation et diffusion
 
-Une **plateforme web** a été créée pour documenter entièrement le projet. On y retrouve :
-- les fichiers CAO,
-- les guides de montage,
-- la présentation des composants,
-- les bases de programmation Arduino.
+Une **plateforme web** accompagne le projet et centralise toutes les ressources nécessaires :
 
-Pour faciliter l’accès à cette documentation en atelier, des **QR codes** ont été apposés directement sur les boîtes de projet et les machines concernées. Ces ressources sont **mises à jour en continu** grâce aux retours des étudiants.
+- fichiers CAO (Onshape),
+- guides de montage illustrés,
+- présentation des composants,
+- tutoriels de programmation (Arduino, servos, capteurs…).
+
+En atelier, l’accès est facilité par des **QR codes** collés directement sur les boîtes et les machines. Et surtout : **la doc évolue en continu**, enrichie à chaque retour d’expérience des étudiant·e·s.
 
 ---
 
@@ -81,19 +71,14 @@ Pour faciliter l’accès à cette documentation en atelier, des **QR codes** on
 >- **Onshape** (CAO collaborative)
 >- **KiCad** (conception de la carte électronique)
 >- **VSCode + Arduino IDE**
->- **Canva / Inkscape** (signalétique, schémas)
->- **Tinkercad Circuits** (simulations pédagogiques)
+>- **Inkscape** (illustrations des tutoriels)
 
 ---
 
 >#### Technologies
 >
->- **[Impression 3D](https://makerspace-amiens.fr/pages/machines/)** (pièces du robot)
->- **[Électronique embarquée](https://makerspace-amiens.fr/pages/machines/)** (ESP32, servos, capteur)
->- **QR codes & documentation web** pour apprentissage en autonomie
-
----
-
-## Conclusion
-
-OTTO-MKS n’est pas simplement un robot : c’est un **support pédagogique transversal**, pensé pour les besoins réels des étudiants de première année. Il permet de découvrir, manipuler et modifier un objet technique tangible, tout en introduisant les outils et la culture Maker dans une logique progressive, collaborative et accessible.
+>- **Impression 3D**
+>- **Électronique embarquée** (ESP32, servos, capteur)
+>- **Jekyll** (interpréteur Markdown pour la documentation web)
+>- **GitHub Pages** (hébergement du site web)
+>- **GitHub** (code source et fichiers open-source)

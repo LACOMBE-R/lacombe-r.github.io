@@ -19,10 +19,9 @@ Dans la **mise en scène**, ces flèches apparaissent après le **tir d'une vol�
 
 Chaque flèche est montée sur une base indépendante, activée via un **hub de contrôle DMX**, permettant une synchronisation précise avec les effets lumière.
 
-
 ---
 
-## Conception mécanique
+### Conception mécanique
 
 Les **bases de flèches** sont imprimées en 3D (PETG) et intègrent :
 
@@ -52,21 +51,17 @@ Les flèches sont surmontées **d’ailerons imprimés en plastique flexible bla
 
 ---
 
-## Connectique et modularité
+### Connectique et modularité
 
 Les bases sont alimentées via des **fiches audio standard**, offrant une **grande souplesse de longueur** et un **montage rapide** sur scène. Ce choix garantit une connectique robuste, détachable, et facilement remplaçable.
 
 ![Câblage des bases avec fiches audio](/img/portfolio/Popup_Arrows/Audio_Connector.png)
 
-<img src="{{ $resized.RelPermalink }}" alt="Câblage des bases avec fiches audio">
-
-
-
 Chaque base peut être installée indépendamment, avec une longueur de câble adaptée à son emplacement.
 
 ---
 
-## Contrôle par DMX
+### Contrôle par DMX
 
 Un **hub de contrôle** dédié (similaire a un switchpack) permet de piloter jusqu’à **12 bases** via **DMX512**. Une valeur supérieure à 127 sur un canal envoie une impulsion 12V à la base concernée.
 
@@ -78,17 +73,19 @@ Le hub est configuré par **DIP switches** pour définir l’adresse de départ,
 
 Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.
 
-![Vues DMX Hub](/img/portfolio/Popup_Arrows/DMX_Hub_2.png)
+![Vues DMX Hub](/img/portfolio/Popup_Arrows/DMX_HUB_2.png)
 
 ---
 
-## Intégration scénique
+### Intégration scénique
 
 Les bases sont conçues pour être **dissimulées** en position couchée dans un **coffrage scénique frontal**. Lors du déclenchement, les flèches surgissent verticalement, créant l'effet d'une apparition.
 
 ![Coffrage](/img/portfolio/Popup_Arrows/Coffrage.jpg)
 
-## Effet
+### Effet
+
+---
 
 {{< video src="/img/portfolio/Popup_Arrows/DEMO.mp4" title="Demo" no-sound="true">}}
 
@@ -106,5 +103,3 @@ Les bases sont conçues pour être **dissimulées** en position couchée dans un
 >
 >- **Onshape** (CAO)
 >- **Chataigne** (Tests et développement)
-
----
