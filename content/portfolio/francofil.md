@@ -25,4 +25,4 @@ Je tiens à remercier mes tuteurs de stage, Florent et Hélène Port pour la con
 
 ### Rapport de stage
 
-{{< francofil >}}
+{{< pdf file="/files/Rapport_Francofil.pdf" >}}

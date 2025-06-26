@@ -91,15 +91,25 @@ Les bases sont conçues pour être **dissimulées** en position couchée dans un
 
 ---
 
->#### Technologies utilisées
->
->- **Impression 3D**  
->- **Découpe Laser**  
->- **Contrôle DMX512**
+### Guide d'utilisation
 
 ---
+
+Pour aider mes clients à comprendre le fonctionnement de mon dispositif, j'ai rédigé un guide d'utilisation en anglais.
+
+{{< pdf file="/files/Pop-up arrows & Control hub User Guide.pdf" >}}
+
+----
 
 >#### Outils logiciels
 >
 >- **Onshape** (CAO)
 >- **Chataigne** (Tests et développement)
+
+---
+
+>#### Technologies utilisées
+>
+>- **Impression 3D**  
+>- **Découpe Laser**  
+>- **Contrôle DMX512**

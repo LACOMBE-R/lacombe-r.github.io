@@ -107,7 +107,7 @@
 <p>Dans la <strong>mise en scène</strong>, ces flèches apparaissent après le <strong>tir d&rsquo;une volée de flèches</strong> dans un <strong>contenu vidéo</strong> à l’arrière de la scène, donnant l’illusion qu’elles viennent se <strong>planter physiquement</strong> en avant-scène.</p>
 <p>Chaque flèche est montée sur une base indépendante, activée via un <strong>hub de contrôle DMX</strong>, permettant une synchronisation précise avec les effets lumière.</p>
 <hr>
-<h2 id="conception-mécanique">Conception mécanique</h2>
+<h3 id="conception-mécanique">Conception mécanique</h3>
 <p>Les <strong>bases de flèches</strong> sont imprimées en 3D (PETG) et intègrent :</p>
 <ul>
 <li>un <strong>ressort de torsion</strong>,</li>
@@ -185,24 +185,24 @@
 
 
 <hr>
-<h2 id="connectique-et-modularité">Connectique et modularité</h2>
+<h3 id="connectique-et-modularité">Connectique et modularité</h3>
 <p>Les bases sont alimentées via des <strong>fiches audio standard</strong>, offrant une <strong>grande souplesse de longueur</strong> et un <strong>montage rapide</strong> sur scène. Ce choix garantit une connectique robuste, détachable, et facilement remplaçable.</p>
 <p><img src="/img/portfolio/Popup_Arrows/Audio_Connector.png" alt="Câblage des bases avec fiches audio"></p>
-<!-- raw HTML omitted -->
 <p>Chaque base peut être installée indépendamment, avec une longueur de câble adaptée à son emplacement.</p>
 <hr>
-<h2 id="contrôle-par-dmx">Contrôle par DMX</h2>
+<h3 id="contrôle-par-dmx">Contrôle par DMX</h3>
 <p>Un <strong>hub de contrôle</strong> dédié (similaire a un switchpack) permet de piloter jusqu’à <strong>12 bases</strong> via <strong>DMX512</strong>. Une valeur supérieure à 127 sur un canal envoie une impulsion 12V à la base concernée.</p>
 <p>J&rsquo;ai utilisé pour cela une carte électronique du commerce ainsi qu&rsquo;une alimentation 12V 30A.</p>
 <p><img src="/img/portfolio/Popup_Arrows/DMX_Board.png" alt="DMX Board"></p>
 <p>Le hub est configuré par <strong>DIP switches</strong> pour définir l’adresse de départ, les sorties suivantes étant affectées automatiquement aux canaux consécutifs.</p>
 <p>Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.</p>
-<p><img src="/img/portfolio/Popup_Arrows/DMX_Hub_2.png" alt="Vues DMX Hub"></p>
+<p><img src="/img/portfolio/Popup_Arrows/DMX_HUB_2.png" alt="Vues DMX Hub"></p>
 <hr>
-<h2 id="intégration-scénique">Intégration scénique</h2>
+<h3 id="intégration-scénique">Intégration scénique</h3>
 <p>Les bases sont conçues pour être <strong>dissimulées</strong> en position couchée dans un <strong>coffrage scénique frontal</strong>. Lors du déclenchement, les flèches surgissent verticalement, créant l&rsquo;effet d&rsquo;une apparition.</p>
 <p><img src="/img/portfolio/Popup_Arrows/Coffrage.jpg" alt="Coffrage"></p>
-<h2 id="effet">Effet</h2>
+<h3 id="effet">Effet</h3>
+<hr>
 
 
 <div style="margin: 2rem 0;">
@@ -220,13 +220,34 @@
 
 
 <hr>
-<blockquote>
-<h4 id="technologies-utilisées">Technologies utilisées</h4>
-<ul>
-<li><strong>Impression 3D</strong></li>
-<li><strong>Découpe Laser</strong></li>
-<li><strong>Contrôle DMX512</strong></li>
-</ul></blockquote>
+<h3 id="guide-dutilisation">Guide d&rsquo;utilisation</h3>
+<hr>
+<p>Pour aider mes clients à comprendre le fonctionnement de mon dispositif, j&rsquo;ai rédigé un guide d&rsquo;utilisation en anglais.</p>
+<style>
+  .pdf-container {
+    position: relative;
+    width: 100%;
+    padding-top: 120%;  
+  }
+  .pdf-container object,
+  .pdf-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+<div class="pdf-container">
+  <object data="/files/Pop-up%20arrows%20&amp;%20Control%20hub%20User%20Guide.pdf" type="application/pdf">
+    <iframe src="/files/Pop-up%20arrows%20&amp;%20Control%20hub%20User%20Guide.pdf">
+      <p>Ce navigateur ne supporte pas les PDF !</p>
+    </iframe>
+  </object>
+</div>
+
 <hr>
 <blockquote>
 <h4 id="outils-logiciels">Outils logiciels</h4>
@@ -235,6 +256,13 @@
 <li><strong>Chataigne</strong> (Tests et développement)</li>
 </ul></blockquote>
 <hr>
+<blockquote>
+<h4 id="technologies-utilisées">Technologies utilisées</h4>
+<ul>
+<li><strong>Impression 3D</strong></li>
+<li><strong>Découpe Laser</strong></li>
+<li><strong>Contrôle DMX512</strong></li>
+</ul></blockquote>
          
       </div>
     </div>

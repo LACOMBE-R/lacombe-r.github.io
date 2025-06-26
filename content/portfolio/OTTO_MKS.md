@@ -98,14 +98,16 @@ J’ai développé un **système d’arbitrage automatisé** grâce a la pipelin
 >### Outils logiciels
 >
 >- **OnShape**
->- **KiCad**
+>- **[KiCad](https://www.kicad.org)** 
 >- **VSCode**
 >- **Inkscape**
 >- **Google Sheets + Google AppSheet**
->
+
+---
+
 >### Technologies
 >
->- **Impression 3D**
+>- **Impression 3D FDM**
 >- **Prototypage électronique**
 >- **Conception de PCB**
->- **Robotique éducative**
+>- **Programmation embarquée (Arduino)** 

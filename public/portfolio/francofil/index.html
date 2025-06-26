@@ -109,13 +109,29 @@ Ayant à cœur de découvrir le monde des PME, c&rsquo;est dans cette direction 
 <p>Je tiens à remercier mes tuteurs de stage, Florent et Hélène Port pour la confiance qu&rsquo;ils m&rsquo;ont portée.</p>
 <hr>
 <h3 id="rapport-de-stage">Rapport de stage</h3>
-<div>
-    <object data="\Rapport_Francofil.pdf" type="application/pdf" width="100%" height="800px">
+<style>
+  .pdf-container {
+    position: relative;
+    width: 100%;
+    padding-top: 120%;  
+  }
+  .pdf-container object,
+  .pdf-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
 
-        <iframe src="\Rapport_Francofil.pdf" width="100%" height="100%">
-            <p>This browser does not support PDF!</p>
-        </iframe>
-    </object>
+<div class="pdf-container">
+  <object data="/files/Rapport_Francofil.pdf" type="application/pdf">
+    <iframe src="/files/Rapport_Francofil.pdf">
+      <p>Ce navigateur ne supporte pas les PDF !</p>
+    </iframe>
+  </object>
 </div>
          
       </div>
