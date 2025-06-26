@@ -1,11 +1,10 @@
 <style>
-  .pdf-container {
+  .pdf-responsive {
     position: relative;
     width: 100%;
-    padding-top: 120%; /* ratio 4:3 = 75%, pour 16:9 mets 56.25% */
+    padding-top: 141.42%; /* format A4 en portrait : √2 ≈ 1.414 */
   }
-  .pdf-container object,
-  .pdf-container iframe {
+  .pdf-responsive iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,10 +14,6 @@
   }
 </style>
 
-<div class="pdf-container">
-  <object data="{{ .Get "file" }}" type="application/pdf">
-    <iframe src="{{ .Get "file" }}">
-      <p>Ce navigateur ne supporte pas les PDF !</p>
-    </iframe>
-  </object>
+<div class="pdf-responsive">
+  <iframe src="{{ .Get "file" }}#toolbar=0&navpanes=0&scrollbar=0" allowfullscreen></iframe>
 </div>

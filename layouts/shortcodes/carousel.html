@@ -1,21 +1,33 @@
-{{ .Scratch.Set "height" (.Get "height") }}
-{{ .Scratch.Set "unit" (.Get "unit") }}
-{{ .Scratch.Set "ordinal" .Ordinal }}
-{{ .Scratch.Set "items" (.Get "items") }}
-<div id="carousel{{ .Ordinal }}" class="carousel" duration="{{ .Get `duration` }}">
-    <ul>
-        {{ range $index, $slide := .Page.Resources.Match (print (.Get "data") "/*") }}
-        <li id="c{{ $.Scratch.Get ` ordinal` }}_slide{{ add $index 1}}"
-            style="min-width: calc(100%/{{ $.Scratch.Get `items` }}); padding-bottom: {{ $.Scratch.Get `height` }}{{ $.Scratch.Get `unit` }};">
-            <img src="{{ $slide }}" alt="" />
-        </li>
-        {{ end }}
-    </ul>
-    <ol>
-        {{ range $index, $page := .Page.Resources.Match (print (.Get "data") "/*") }}
-        <li><a href="#c{{ $.Scratch.Get ` ordinal` }}_slide{{ add $index 1 }}"></a></li>
-        {{ end }}
-    </ol>
-    <div class="prev">&lsaquo;</div>
-    <div class="next">&rsaquo;</div>
+{{/* Récupération des paramètres une seule fois au début */}}
+{{ $path := .Get "path" }}
+{{ $items := .Get "items" }}
+{{ $height := .Get "height" }}
+{{ $unit := .Get "unit" }}
+{{ $duration := .Get "duration" }}
+{{ $images := slice }}
+
+{{ range readDir (printf "static/%s" $path) }}
+  {{ if not .IsDir }}
+    {{ $images = $images | append (printf "/%s/%s" $path .Name) }}
+  {{ end }}
+{{ end }}
+
+<div class="carousel" duration="{{ $duration }}">
+  <ul>
+    {{ range $index, $img := $images }}
+    <li id="slide{{ add $index 1 }}"
+        style="min-width: calc(100%/{{ $items }}); padding-bottom: {{ $height }}{{ $unit }};">
+      <img src="{{ $img | absURL }}" alt="">
+    </li>
+    {{ end }}
+  </ul>
+
+  <ol>
+    {{ range $index, $_ := $images }}
+    <li><a href="#slide{{ add $index 1 }}"></a></li>
+    {{ end }}
+  </ol>
+
+  <div class="prev">&lsaquo;</div>
+  <div class="next">&rsaquo;</div>
 </div>

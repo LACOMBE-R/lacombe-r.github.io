@@ -4,7 +4,7 @@ title = "Fraiseuse CNC"
 draft = false
 image = "img/portfolio/CNC/Presentation-1024x682.jpg"
 showonlyimage = false
-weight = 4
+weight = 5
 +++
 
 Construction d'une fraiseuse à commande numérique

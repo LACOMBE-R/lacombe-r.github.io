@@ -1,9 +1,9 @@
 +++
 draft = false
-image = "img/portfolio/match_cdr_2023.jpg"
+image = "img/portfolio/CDR/match_cdr_2023.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Coupe de France de Robotique"
-weight = 1
+weight = 1.5
 +++
 
 Un événement exceptionnel, un cahier des charges strict et 6 mois de création !
@@ -14,7 +14,14 @@ Un événement exceptionnel, un cahier des charges strict et 6 mois de création
 
 ## Présentation
 
-{{< carousel items="1" height="75" unit="%" duration="3000" data="CDR_Carousel" >}}
+{{< carousel
+  path="img/portfolio/CDR/CDR_Carousel"
+  items="1"
+  height="75"
+  unit="%"
+  duration="3000"
+>}}
+
 
 ---
 

@@ -99,7 +99,7 @@
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>Flèches à apparition – dispositif scénique</h1>
+         <h1>Flèches à apparition</h1>
          <p>Développement d’un ensemble de flèches à apparition, pour une illusion scénique dans une comédie musicale.</p>
 <hr>
 <h2 id="présentation">Présentation</h2>
@@ -118,119 +118,510 @@
 <h4 id="premier-test-du-mécanisme"><strong>Premier test du mécanisme</strong></h4>
 
 
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+
+
+
+
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid.double.portrait {
+      flex-direction: row;
+    }
+    .video-grid.double.portrait .video-wrapper {
+      flex: 1;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+  }
+</style>
+
+<div class="video-grid ">
+  <div class="video-wrapper">
     <video
       src="/img/portfolio/Popup_Arrows/FIRST_TEST.mp4"
       title="Premiers tests du mécanisme"
-      
-        muted autoplay playsinline loop
-      
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      muted autoplay playsinline loop>
     </video>
   </div>
+
+  
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-grid.double").forEach(grid => {
+      const videos = grid.querySelectorAll("video");
+      if (videos.length !== 2) return;
+      let loaded = 0;
+      const ratios = [];
+      videos.forEach(video => {
+        video.addEventListener("loadedmetadata", () => {
+          ratios.push(video.videoWidth / video.videoHeight);
+          loaded++;
+          if (loaded === 2 && ratios[0] < 0.9 && ratios[1] < 0.9) {
+            grid.classList.add("portrait");
+          }
+        });
+      });
+    });
+  });
+</script>
 
 <hr>
 <p>Les flèches, achetées dans le commerce et modifiées, s’insèrent dans la base par une <strong>rotation d’un quart de tour</strong>, qui verrouille mécaniquement leur position. Une fois abaissées, elles sont maintenues en tension jusqu’au déclenchement électrique. Un <strong>loqueteau à bille réglable</strong> permet d’atténuer le rebond lors de l’éjection.</p>
 
 
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+
+
+
+
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid.double.portrait {
+      flex-direction: row;
+    }
+    .video-grid.double.portrait .video-wrapper {
+      flex: 1;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+  }
+</style>
+
+<div class="video-grid ">
+  <div class="video-wrapper">
     <video
       src="/img/portfolio/Popup_Arrows/Rotate_Lock.mp4"
       title="Verouillage de la flèche"
-      
-        muted autoplay playsinline loop
-      
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      muted autoplay playsinline loop>
     </video>
   </div>
+
+  
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-grid.double").forEach(grid => {
+      const videos = grid.querySelectorAll("video");
+      if (videos.length !== 2) return;
+      let loaded = 0;
+      const ratios = [];
+      videos.forEach(video => {
+        video.addEventListener("loadedmetadata", () => {
+          ratios.push(video.videoWidth / video.videoHeight);
+          loaded++;
+          if (loaded === 2 && ratios[0] < 0.9 && ratios[1] < 0.9) {
+            grid.classList.add("portrait");
+          }
+        });
+      });
+    });
+  });
+</script>
 
 <p>Les flèches sont surmontées <strong>d’ailerons imprimés en plastique flexible blanc (TPU)</strong>, pour une plus grande durabilité et impact visuel que des plumes réelles.</p>
 <hr>
 
 
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+
+
+
+
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid.double.portrait {
+      flex-direction: row;
+    }
+    .video-grid.double.portrait .video-wrapper {
+      flex: 1;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+  }
+</style>
+
+<div class="video-grid double">
+  <div class="video-wrapper">
     <video
       src="/img/portfolio/Popup_Arrows/fins.mp4"
       title="Ailerons en TPU"
-      
-        muted autoplay playsinline loop
-      
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      muted autoplay playsinline loop>
     </video>
   </div>
-</div>
 
-
-
-
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+  
+  <div class="video-wrapper">
     <video
       src="/img/portfolio/Popup_Arrows/Arrow_Base_Show.mp4"
-      title="Ailerons en TPU"
-      
-        muted autoplay playsinline loop
-      
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      title="Présentation base"
+      muted autoplay playsinline loop>
     </video>
   </div>
+  
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-grid.double").forEach(grid => {
+      const videos = grid.querySelectorAll("video");
+      if (videos.length !== 2) return;
+      let loaded = 0;
+      const ratios = [];
+      videos.forEach(video => {
+        video.addEventListener("loadedmetadata", () => {
+          ratios.push(video.videoWidth / video.videoHeight);
+          loaded++;
+          if (loaded === 2 && ratios[0] < 0.9 && ratios[1] < 0.9) {
+            grid.classList.add("portrait");
+          }
+        });
+      });
+    });
+  });
+</script>
 
 <hr>
 <h3 id="connectique-et-modularité">Connectique et modularité</h3>
 <p>Les bases sont alimentées via des <strong>fiches audio standard</strong>, offrant une <strong>grande souplesse de longueur</strong> et un <strong>montage rapide</strong> sur scène. Ce choix garantit une connectique robuste, détachable, et facilement remplaçable.</p>
-<p><img src="/img/portfolio/Popup_Arrows/Audio_Connector.png" alt="Câblage des bases avec fiches audio"></p>
+<style>
+.image-16x9-container {
+  width: 100%;
+}
+
+ 
+.image-16x9-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;  
+  overflow: hidden;
+  background: #ffffff;
+  display: none;
+}
+
+ 
+.image-16x9-inner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ 
+.image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ 
+@media screen and (min-width: 768px) {
+  .image-16x9-inner {
+    display: block;
+  }
+  .image-full {
+    display: none;
+  }
+}
+</style>
+
+<div class="image-16x9-container">
+  <div class="image-16x9-inner">
+    <img src="/img/portfolio/Popup_Arrows/Audio_Connector.png" alt="Câblage des bases avec fiches audio">
+  </div>
+  <img class="image-full" src="/img/portfolio/Popup_Arrows/Audio_Connector.png" alt="Câblage des bases avec fiches audio">
+</div>
+
 <p>Chaque base peut être installée indépendamment, avec une longueur de câble adaptée à son emplacement.</p>
 <hr>
 <h3 id="contrôle-par-dmx">Contrôle par DMX</h3>
 <p>Un <strong>hub de contrôle</strong> dédié (similaire a un switchpack) permet de piloter jusqu’à <strong>12 bases</strong> via <strong>DMX512</strong>. Une valeur supérieure à 127 sur un canal envoie une impulsion 12V à la base concernée.</p>
 <p>J&rsquo;ai utilisé pour cela une carte électronique du commerce ainsi qu&rsquo;une alimentation 12V 30A.</p>
-<p><img src="/img/portfolio/Popup_Arrows/DMX_Board.png" alt="DMX Board"></p>
+<style>
+.image-16x9-container {
+  width: 100%;
+}
+
+ 
+.image-16x9-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;  
+  overflow: hidden;
+  background: #ffffff;
+  display: none;
+}
+
+ 
+.image-16x9-inner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ 
+.image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ 
+@media screen and (min-width: 768px) {
+  .image-16x9-inner {
+    display: block;
+  }
+  .image-full {
+    display: none;
+  }
+}
+</style>
+
+<div class="image-16x9-container">
+  <div class="image-16x9-inner">
+    <img src="/img/portfolio/Popup_Arrows/DMX_Board.png" alt="Carte électronique DMX">
+  </div>
+  <img class="image-full" src="/img/portfolio/Popup_Arrows/DMX_Board.png" alt="Carte électronique DMX">
+</div>
+
 <p>Le hub est configuré par <strong>DIP switches</strong> pour définir l’adresse de départ, les sorties suivantes étant affectées automatiquement aux canaux consécutifs.</p>
 <p>Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.</p>
-<p><img src="/img/portfolio/Popup_Arrows/DMX_HUB_2.png" alt="Vues DMX Hub"></p>
+<style>
+.image-16x9-container {
+  width: 100%;
+}
+
+ 
+.image-16x9-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;  
+  overflow: hidden;
+  background: #ffffff;
+  display: none;
+}
+
+ 
+.image-16x9-inner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ 
+.image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ 
+@media screen and (min-width: 768px) {
+  .image-16x9-inner {
+    display: block;
+  }
+  .image-full {
+    display: none;
+  }
+}
+</style>
+
+<div class="image-16x9-container">
+  <div class="image-16x9-inner">
+    <img src="/img/portfolio/Popup_Arrows/DMX_HUB_2.png" alt="Boîtier DMX avec LED">
+  </div>
+  <img class="image-full" src="/img/portfolio/Popup_Arrows/DMX_HUB_2.png" alt="Boîtier DMX avec LED">
+</div>
+
 <hr>
 <h3 id="intégration-scénique">Intégration scénique</h3>
 <p>Les bases sont conçues pour être <strong>dissimulées</strong> en position couchée dans un <strong>coffrage scénique frontal</strong>. Lors du déclenchement, les flèches surgissent verticalement, créant l&rsquo;effet d&rsquo;une apparition.</p>
-<p><img src="/img/portfolio/Popup_Arrows/Coffrage.jpg" alt="Coffrage"></p>
+<style>
+.image-16x9-container {
+  width: 100%;
+}
+
+ 
+.image-16x9-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;  
+  overflow: hidden;
+  background: #ffffff;
+  display: none;
+}
+
+ 
+.image-16x9-inner img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ 
+.image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ 
+@media screen and (min-width: 768px) {
+  .image-16x9-inner {
+    display: block;
+  }
+  .image-full {
+    display: none;
+  }
+}
+</style>
+
+<div class="image-16x9-container">
+  <div class="image-16x9-inner">
+    <img src="/img/portfolio/Popup_Arrows/Coffrage.jpg" alt="Coffrage en bois">
+  </div>
+  <img class="image-full" src="/img/portfolio/Popup_Arrows/Coffrage.jpg" alt="Coffrage en bois">
+</div>
+
 <h3 id="effet">Effet</h3>
 <hr>
 
 
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+
+
+
+
+
+<style>
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid.double.portrait {
+      flex-direction: row;
+    }
+    .video-grid.double.portrait .video-wrapper {
+      flex: 1;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+  }
+</style>
+
+<div class="video-grid ">
+  <div class="video-wrapper">
     <video
       src="/img/portfolio/Popup_Arrows/DEMO.mp4"
       title="Demo"
-      
-        muted autoplay playsinline loop
-      
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      muted autoplay playsinline loop>
     </video>
   </div>
+
+  
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-grid.double").forEach(grid => {
+      const videos = grid.querySelectorAll("video");
+      if (videos.length !== 2) return;
+      let loaded = 0;
+      const ratios = [];
+      videos.forEach(video => {
+        video.addEventListener("loadedmetadata", () => {
+          ratios.push(video.videoWidth / video.videoHeight);
+          loaded++;
+          if (loaded === 2 && ratios[0] < 0.9 && ratios[1] < 0.9) {
+            grid.classList.add("portrait");
+          }
+        });
+      });
+    });
+  });
+</script>
 
 <hr>
 <h3 id="guide-dutilisation">Guide d&rsquo;utilisation</h3>
 <hr>
 <p>Pour aider mes clients à comprendre le fonctionnement de mon dispositif, j&rsquo;ai rédigé un guide d&rsquo;utilisation en anglais.</p>
 <style>
-  .pdf-container {
+  .pdf-responsive {
     position: relative;
     width: 100%;
-    padding-top: 120%;  
+    padding-top: 141.42%;  
   }
-  .pdf-container object,
-  .pdf-container iframe {
+  .pdf-responsive iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -240,12 +631,8 @@
   }
 </style>
 
-<div class="pdf-container">
-  <object data="/files/Pop-up%20arrows%20&amp;%20Control%20hub%20User%20Guide.pdf" type="application/pdf">
-    <iframe src="/files/Pop-up%20arrows%20&amp;%20Control%20hub%20User%20Guide.pdf">
-      <p>Ce navigateur ne supporte pas les PDF !</p>
-    </iframe>
-  </object>
+<div class="pdf-responsive">
+  <iframe src="/files/Pop-up%20arrows%20&amp;%20Control%20hub%20User%20Guide.pdf#toolbar=0&navpanes=0&scrollbar=0" allowfullscreen></iframe>
 </div>
 
 <hr>

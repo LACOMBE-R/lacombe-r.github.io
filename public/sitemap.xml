@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/portfolio/addastra/</loc>
-    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
+    <loc>http://localhost:1313/portfolio/otto-mks/</loc>
+    <lastmod>2025-06-25T18:00:00+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/cdr/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/otto_mks/</loc>
-    <lastmod>2025-06-25T18:00:00+02:00</lastmod>
+    <loc>http://localhost:1313/portfolio/glowing_necklace/</loc>
+    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/prostetic/</loc>
     <lastmod>2016-11-05T19:44:32+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/addastra/</loc>
+    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/popup_arrows/</loc>
     <lastmod>2025-02-15T00:00:00+02:00</lastmod>
@@ -31,9 +34,6 @@
   </url><url>
     <loc>http://localhost:1313/portfolio/sgdf/</loc>
     <lastmod>2016-11-05T19:50:47+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/glowing_necklace/</loc>
-    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/</loc>
     <lastmod>2025-06-25T18:00:00+02:00</lastmod>

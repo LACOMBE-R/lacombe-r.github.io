@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    {{- $tag := .Get "tag" -}}
+    {{- $pages := where site.RegularPages "Section" "portfolio" -}}
+    {{- if $tag }}
+      {{- $pages = where $pages "Params.tag" $tag -}}
+    {{- end }}
+    {{- $pages = sort $pages "Weight" -}}
+
+    {{- range $pages }}
+    <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
+      <div class="box-masonry">
+        <a href="{{ .Permalink }}" class="box-masonry-image with-hover-overlay with-hover-icon">
+          <img src="{{ .Params.image | absURL }}" alt="" class="img-responsive">
+        </a>
+        <div class="box-masonry-text">
+          <h4><a href="{{ .Permalink }}">{{ .Title | upper }}</a></h4>
+          <div class="box-masonry-description">
+            <p>{{ .Summary }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</div>

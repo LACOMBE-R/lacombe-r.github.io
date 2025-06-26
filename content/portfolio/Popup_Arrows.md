@@ -2,8 +2,9 @@
 draft = false
 image = "img/portfolio/Popup_Arrows/icon.gif"
 date = "2025-02-15T00:00:00+02:00"
-title = "Flèches à apparition – dispositif scénique"
-weight = 3
+title = "Flèches à apparition"
+weight = 2
+tag = "addastra"
 +++
 
 Développement d’un ensemble de flèches à apparition, pour une illusion scénique dans une comédie musicale.
@@ -36,7 +37,7 @@ Les **bases de flèches** sont imprimées en 3D (PETG) et intègrent :
 {{< video src="/img/portfolio/Popup_Arrows/FIRST_TEST.mp4" title="Premiers tests du mécanisme" no-sound="true">}}  
 
 ---
-  
+
 Les flèches, achetées dans le commerce et modifiées, s’insèrent dans la base par une **rotation d’un quart de tour**, qui verrouille mécaniquement leur position. Une fois abaissées, elles sont maintenues en tension jusqu’au déclenchement électrique. Un **loqueteau à bille réglable** permet d’atténuer le rebond lors de l’éjection.
 
 {{< video src="/img/portfolio/Popup_Arrows/Rotate_Lock.mp4" title="Verouillage de la flèche" no-sound="true">}}  
@@ -45,9 +46,14 @@ Les flèches sont surmontées **d’ailerons imprimés en plastique flexible bla
 
 ---
 
-{{< video src="/img/portfolio/Popup_Arrows/fins.mp4" title="Ailerons en TPU" no-sound="true">}}  
-
-{{< video src="/img/portfolio/Popup_Arrows/Arrow_Base_Show.mp4" title="Ailerons en TPU" no-sound="true">}}  
+{{< video
+  src="/img/portfolio/Popup_Arrows/fins.mp4"
+  title="Ailerons en TPU"
+  no-sound="true"
+  src2="/img/portfolio/Popup_Arrows/Arrow_Base_Show.mp4"
+  title2="Présentation base"
+  no-sound2="true"
+>}}
 
 ---
 
@@ -55,7 +61,7 @@ Les flèches sont surmontées **d’ailerons imprimés en plastique flexible bla
 
 Les bases sont alimentées via des **fiches audio standard**, offrant une **grande souplesse de longueur** et un **montage rapide** sur scène. Ce choix garantit une connectique robuste, détachable, et facilement remplaçable.
 
-![Câblage des bases avec fiches audio](/img/portfolio/Popup_Arrows/Audio_Connector.png)
+{{< image16x9 src="/img/portfolio/Popup_Arrows/Audio_Connector.png" alt="Câblage des bases avec fiches audio" >}}
 
 Chaque base peut être installée indépendamment, avec une longueur de câble adaptée à son emplacement.
 
@@ -67,13 +73,13 @@ Un **hub de contrôle** dédié (similaire a un switchpack) permet de piloter ju
 
 J'ai utilisé pour cela une carte électronique du commerce ainsi qu'une alimentation 12V 30A.
 
-![DMX Board](/img/portfolio/Popup_Arrows/DMX_Board.png)
+{{< image16x9 src="/img/portfolio/Popup_Arrows/DMX_Board.png" alt="Carte électronique DMX" >}}
 
 Le hub est configuré par **DIP switches** pour définir l’adresse de départ, les sorties suivantes étant affectées automatiquement aux canaux consécutifs.
 
 Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.
 
-![Vues DMX Hub](/img/portfolio/Popup_Arrows/DMX_HUB_2.png)
+{{< image16x9 src="/img/portfolio/Popup_Arrows/DMX_HUB_2.png" alt="Boîtier DMX avec LED" >}}
 
 ---
 
@@ -81,7 +87,7 @@ Le tout est integré dans un boitier composé de pièces imprimées et de carter
 
 Les bases sont conçues pour être **dissimulées** en position couchée dans un **coffrage scénique frontal**. Lors du déclenchement, les flèches surgissent verticalement, créant l'effet d'une apparition.
 
-![Coffrage](/img/portfolio/Popup_Arrows/Coffrage.jpg)
+{{< image16x9 src="/img/portfolio/Popup_Arrows/Coffrage.jpg" alt="Coffrage en bois" >}}
 
 ### Effet
 

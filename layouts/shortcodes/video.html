@@ -1,21 +1,75 @@
-<!-- <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
-    <video src="\img\portfolio\Prostetic\prostetic.mp4" controls title="Vidéo démo prothèse"
-        style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-        muted allowfullscreen frameborder="0"></video>
-</div> -->
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" }}
+{{ $nosound := .Get "no-sound" }}
+{{ $src2 := .Get "src2" }}
+{{ $title2 := .Get "title2" }}
+{{ $nosound2 := .Get "no-sound2" }}
 
-<div style="margin: 2rem 0;">
-  <div style="position: relative; padding-bottom: 100%; padding-top: 30px; height: 0; overflow: hidden;">
+<style>
+  .video-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .video-grid.double.portrait {
+      flex-direction: row;
+    }
+    .video-grid.double.portrait .video-wrapper {
+      flex: 1;
+    }
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(63,69,81,0.16);
+  }
+</style>
+
+<div class="video-grid {{ if $src2 }}double{{ end }}">
+  <div class="video-wrapper">
     <video
-      src="{{ .Get "src" }}"
-      title="{{ .Get "title" }}"
-      {{ if eq (.Get "no-sound") "true" }}
-        muted autoplay playsinline loop
-      {{ else }}
-        controls
-      {{ end }}
-      style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      src="{{ $src }}"
+      title="{{ $title }}"
+      {{ if eq $nosound "true" }}muted autoplay playsinline loop{{ else }}controls{{ end }}>
     </video>
   </div>
+
+  {{ if $src2 }}
+  <div class="video-wrapper">
+    <video
+      src="{{ $src2 }}"
+      title="{{ $title2 }}"
+      {{ if eq $nosound2 "true" }}muted autoplay playsinline loop{{ else }}controls{{ end }}>
+    </video>
+  </div>
+  {{ end }}
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-grid.double").forEach(grid => {
+      const videos = grid.querySelectorAll("video");
+      if (videos.length !== 2) return;
+      let loaded = 0;
+      const ratios = [];
+      videos.forEach(video => {
+        video.addEventListener("loadedmetadata", () => {
+          ratios.push(video.videoWidth / video.videoHeight);
+          loaded++;
+          if (loaded === 2 && ratios[0] < 0.9 && ratios[1] < 0.9) {
+            grid.classList.add("portrait");
+          }
+        });
+      });
+    });
+  });
+</script>

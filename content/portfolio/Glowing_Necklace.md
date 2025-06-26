@@ -3,7 +3,8 @@ draft = false
 image = "img/portfolio/Glowing_Necklace/Icon.gif"
 date = "2025-02-15T00:00:00+01:00"
 title = "Collier lumineux pour la scène"
-weight = 10
+weight = 2
+tag = "addastra"
 +++
 
 Accessoire lumineux conçu sur mesure pour la scène, mêlant électronique embarquée, illusion et exigence d'encombrement.
@@ -28,13 +29,11 @@ L’ensemble est organisé autour de trois éléments :
 >- une **pierre imprimée en résine translucide** abritant la matrice LED et un bouton dissimulé à l'arrière,  
 >- un **faux collier** intégrant les fils d’alimentation de manière invisible,  
 
-![Bouton](/img/portfolio/Glowing_Necklace/switch.jpg)
-
-
+![Bouton](/img/portfolio/Glowing_Necklace/switch.jpg)  
 
 >- une **boîte de contrôle ceinture**, contenant l’électronique et la batterie,  
 
-![Boitier](/img/portfolio/Glowing_Necklace/BOX.gif)
+![Boitier](/img/portfolio/Glowing_Necklace/BOX.gif)  
 
 ---
 

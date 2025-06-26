@@ -23,11 +23,18 @@
       <description>&lt;p&gt;Un événement exceptionnel, un cahier des charges strict et 6 mois de création !&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OTTO-MKS : un robot pédagogique</title>
-      <link>http://localhost:1313/portfolio/otto_mks/</link>
-      <pubDate>Wed, 25 Jun 2025 18:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/portfolio/otto_mks/</guid>
-      <description>&lt;p&gt;Un robot bipède imprimé en 3D, open-source, et pensé pour initier les étudiants aux bases de la robotique, de l’électronique et de la programmation.&lt;/p&gt;</description>
+      <title>Collier lumineux pour la scène</title>
+      <link>http://localhost:1313/portfolio/glowing_necklace/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/portfolio/glowing_necklace/</guid>
+      <description>&lt;p&gt;Accessoire lumineux conçu sur mesure pour la scène, mêlant électronique embarquée, illusion et exigence d&amp;rsquo;encombrement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flèches à apparition</title>
+      <link>http://localhost:1313/portfolio/popup_arrows/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/portfolio/popup_arrows/</guid>
+      <description>&lt;p&gt;Développement d’un ensemble de flèches à apparition, pour une illusion scénique dans une comédie musicale.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Prothèse sur-mesure</title>
@@ -37,11 +44,11 @@
       <description>&lt;p&gt;Création d&amp;rsquo;une prothèse de doigt sur mesure&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Flèches à apparition – dispositif scénique</title>
-      <link>http://localhost:1313/portfolio/popup_arrows/</link>
-      <pubDate>Sat, 15 Feb 2025 00:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/portfolio/popup_arrows/</guid>
-      <description>&lt;p&gt;Développement d’un ensemble de flèches à apparition, pour une illusion scénique dans une comédie musicale.&lt;/p&gt;</description>
+      <title>OTTO-MKS : un robot pédagogique</title>
+      <link>http://localhost:1313/portfolio/otto-mks/</link>
+      <pubDate>Wed, 25 Jun 2025 18:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/portfolio/otto-mks/</guid>
+      <description>&lt;p&gt;Un robot bipède imprimé en 3D, open-source, et pensé pour initier les étudiants aux bases de la robotique, de l’électronique et de la programmation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Télécommande IoT</title>
@@ -51,13 +58,6 @@
       <description>&lt;p&gt;Faire entrer un ampli vieillissant dans le 21ème siècle en créant une télécommande infrarouge connectée.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Fraiseuse CNC</title>
-      <link>http://localhost:1313/portfolio/cnc/</link>
-      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
-      <guid>http://localhost:1313/portfolio/cnc/</guid>
-      <description>&lt;p&gt;Construction d&amp;rsquo;une fraiseuse à commande numérique&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Stage chez Francofil</title>
       <link>http://localhost:1313/portfolio/francofil/</link>
       <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
@@ -65,11 +65,11 @@
       <description>&lt;p&gt;Stage ouvrier en 2021&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Stage chez Actemium</title>
-      <link>http://localhost:1313/portfolio/actemium/</link>
-      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
-      <guid>http://localhost:1313/portfolio/actemium/</guid>
-      <description>&lt;p&gt;Stage de découverte en 2018&lt;/p&gt;</description>
+      <title>Fraiseuse CNC</title>
+      <link>http://localhost:1313/portfolio/cnc/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      <guid>http://localhost:1313/portfolio/cnc/</guid>
+      <description>&lt;p&gt;Construction d&amp;rsquo;une fraiseuse à commande numérique&lt;/p&gt;</description>
     </item>
     <item>
       <title>Engagement chez les Scouts et Guides de France</title>
@@ -77,13 +77,6 @@
       <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
       <guid>http://localhost:1313/portfolio/sgdf/</guid>
       <description>&lt;p&gt;Animateur pour les 8-11 ans&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Collier lumineux pour la scène</title>
-      <link>http://localhost:1313/portfolio/glowing_necklace/</link>
-      <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/portfolio/glowing_necklace/</guid>
-      <description>&lt;p&gt;Accessoire lumineux conçu sur mesure pour la scène, mêlant électronique embarquée, illusion et exigence d&amp;rsquo;encombrement.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
