@@ -108,7 +108,8 @@ Dans l&rsquo;idée, je souhaitais pouvoir contrôler mon ampli grâce à des <st
 <blockquote>
 <p><em><strong>&ldquo;Hey Google, allume l&rsquo;ampli&rdquo;</strong></em><br>
 <em><strong>&ldquo;OK Google, augmente le volume de l&rsquo;ampli&rdquo;</strong></em><br>
-<em><strong>&ldquo;Hey Google, bascule l&rsquo;entrée de l&rsquo;ampli sur mon PC&rdquo;</strong></em></p></blockquote>
+<em><strong>&ldquo;Hey Google, bascule l&rsquo;entrée de l&rsquo;ampli sur mon PC&rdquo;</strong></em></p>
+</blockquote>
 <p>Pour cela, j&rsquo;ai entamé une importante phase de <strong>recherche</strong> : La seule manière de contrôler l&rsquo;ampli à distance est une <strong>télécommande</strong>, que je ne souhaitais pas acheter (beaucoup plus sympa de construire la mienne !). J&rsquo;ai déterminé qu&rsquo;il était possible de <strong>simuler une télécommande</strong> en utilisant une simple <strong>LED infrarouge</strong> connectée à un <strong>micro-contrôleur</strong> (ici un ESP-01).</p>
 <p>Il a ensuite fallu déterminer les codes à émettre pour chacune des touches dont j&rsquo;avais besoin. Je m&rsquo;en suis sorti grâce à la vaste librairie d&rsquo;un <strong>projet open-source</strong> visant à recenser tous les codes infrarouges de commande en fonction des constructeurs (<strong><a href="https://www.lirc.org"  target="_blank" rel="noopener" >LIRC</a></strong>).</p>
 <p>La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C&rsquo;est encore une fois l&rsquo;open source qui me sauve ! Le projet <strong><a href="https://tasmota.github.io/docs/"  target="_blank" rel="noopener" >Tasmota</a></strong> est un firmware modulaire et très facile d&rsquo;installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d&rsquo;une <strong>LED infrarouge</strong>, ainsi qu&rsquo;une passerelle simplifiée avec <strong>Home Assistant</strong>.</p>
@@ -133,14 +134,16 @@ Je peux maintenant contrôler mon ampli depuis mon tableau de bord <strong><a hr
 <li><strong><a href="https://snapmaker.com/snapmaker-luban"  target="_blank" rel="noopener" >Snapmaker Luban</a></strong></li>
 <li><strong>VSCode</strong></li>
 <li><strong>SuperSlicer</strong></li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <hr>
 <blockquote>
 <h4 id="technologies">Technologies</h4>
 <ul>
 <li><strong><a href="https://makerspace-amiens.fr/pages/machines/"  target="_blank" rel="noopener" >Impression 3D</a></strong></li>
 <li><strong><a href="https://makerspace-amiens.fr/pages/machines/"  target="_blank" rel="noopener" >CNC Snapmaker 2.0 A350T</a></strong></li>
-</ul></blockquote>
+</ul>
+</blockquote>
          
       </div>
     </div>

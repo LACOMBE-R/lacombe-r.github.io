@@ -1,0 +1,7 @@
+{{ $repo := .Get "repo" }}
+
+<div style="display: flex;">
+  <a href="https://github.com/{{ $repo }}" target="_blank" rel="noopener">
+    <img src="https://gh-card.dev/repos/{{ $repo }}.svg" alt="{{ $repo }}">
+  </a>
+</div>

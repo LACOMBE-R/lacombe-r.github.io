@@ -39,11 +39,11 @@ Le projet propose aux étudiants une **expérience complète et concrète** : co
 
 Chaque robot fonctionne avec :
 
-> 🧠 **XIAO ESP32-C3** — Microcontrôleur Wi-Fi & Bluetooth, programmable avec Arduino  
-> ⚙️ **4 servomoteurs 9g** — Deux jambes, Deux pieds articulés  
-> 👀 **Capteur HC-SR04** — Monté à l’avant comme des "yeux"  
-> 🔋 **Batterie 9V USB-C rechargeable** - Gestion énergetique simple
-> 🔊 **Buzzer & LED** — retours simples et visibles
+> **XIAO ESP32-C3** — Microcontrôleur Wi-Fi & Bluetooth, programmable avec Arduino  
+> **4 servomoteurs 9g** — Deux jambes, Deux pieds articulés  
+> **Capteur HC-SR04** — Monté à l’avant comme des "yeux"  
+> **Batterie 9V USB-C rechargeable** - Gestion énergetique simple
+> **Buzzer & LED** — retours simples et visibles
 
 L’électronique repose sur une **carte conçue sur mesure** par mon collègue et ami **Adrien Bracq**.
 La structure mécanique est **entièrement modélisée sous OnShape**, ce qui permet aux étudiants de la modifier librement.
@@ -61,8 +61,8 @@ Les étudiants y trouvent :
 - Le guide d’assemblage pas-à-pas
 - Les tutoriels pour découvrir les rôles des composants 
 
-> 👉 Accès libre à la documentation :  
-> 🔗 [makerspace-amiens.fr/otto-mks](https://makerspace-amiens.fr/otto-mks/)
+> Accès libre à la documentation :  
+> [makerspace-amiens.fr/otto-mks](https://makerspace-amiens.fr/otto-mks/)
 
 ---
 
@@ -85,18 +85,18 @@ Les séances sont organisées autour de **tutoriels interactifs** couvrant chaqu
 
 Chaque équipe peut ensuite modifier son robot pour participer aux **Ottolympiades** !
 
-> 🎨 Certains robots ont pris l’apparence de personnages de fiction, d'autres ont été rééquilibrés, renforcés ou dotés de bras articulés.
+> Certains robots ont pris l’apparence de personnages de fiction, d'autres ont été rééquilibrés, renforcés ou dotés de bras articulés.
 
 ![Robots modifiés](/img/portfolio/OTTO-MKS/Otto-MKS-Mods.png)
 
 ---
 
-## Les Ottolympiades : un final festif
+## Les Ottolympiades
 
 Le projet se conclut lors de la **Journée des Projets** par un tournoi convivial : les **Ottolympiades** !
 Une série de trois épreuves créatives, dont le réglement est disponible sur la plateforme de documentation :  
 
-> 🔗 [makerspace-amiens.fr/otto-mks/ottolympiades](https://makerspace-amiens.fr/otto-mks/ottolympiades)  
+> [makerspace-amiens.fr/otto-mks/ottolympiades](https://makerspace-amiens.fr/otto-mks/ottolympiades)  
 
 Ici, la finale de Otto Sumo !
 
@@ -104,7 +104,7 @@ Ici, la finale de Otto Sumo !
 
 ---
 
-J’ai développé un **système d’arbitrage automatisé** grâce a la pipeline Google Sheets + Google AppSheet, permettant à plusieurs arbitres d’entrer les scores depuis leur téléphone, avec calculs automatiques et affichage en temps réel.
+J’ai également développé un **système d’arbitrage automatisé** grâce a la pipeline Google Sheets + Google AppSheet, permettant à plusieurs arbitres d’entrer les scores depuis leur téléphone, avec calculs automatiques et affichage en temps réel.
 
 
 

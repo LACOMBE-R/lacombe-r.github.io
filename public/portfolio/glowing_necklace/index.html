@@ -113,12 +113,14 @@
 <ul>
 <li>une <strong>pierre imprimée en résine translucide</strong> abritant la matrice LED et un bouton dissimulé à l&rsquo;arrière,</li>
 <li>un <strong>faux collier</strong> intégrant les fils d’alimentation de manière invisible,</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p><img src="/img/portfolio/Glowing_Necklace/switch.jpg" alt="Bouton"></p>
 <blockquote>
 <ul>
 <li>une <strong>boîte de contrôle ceinture</strong>, contenant l’électronique et la batterie,</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p><img src="/img/portfolio/Glowing_Necklace/BOX.gif" alt="Boitier"></p>
 <hr>
 <h3 id="conception-dun-pcb-sur-mesure">Conception d’un PCB sur mesure</h3>
@@ -130,7 +132,8 @@
 <li>Un connecteur pour <strong>bouton</strong> déclenchant la séquence lumineuse après appui prolongé,</li>
 <li>Des LEDs témoins de charge et d&rsquo;allumage,</li>
 <li>Une batterie,</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <h4 id="premiers-tests-">Premiers tests :</h4>
 <p><img src="/img/portfolio/Glowing_Necklace/FIRST_TEST.gif" alt="Premiers tests"></p>
 <p><img src="/img/portfolio/Glowing_Necklace/PCB.png" alt="PCB"></p>
@@ -138,18 +141,18 @@
 <h3 id="contrôle-de-la-séquence--firmware-embarqué">Contrôle de la séquence : firmware embarqué</h3>
 <p>Le firmware est écrit en <strong>Arduino C++</strong>, optimisé pour garantir une <strong>séquence fluide</strong> et une activation fiable dans un environnement scénique.</p>
 <p>Pour le contrôle de l&rsquo;animation, j&rsquo;ai imaginé <strong>une fonction de fondu progressif</strong>, qui interpole automatiquement entre plusieurs valeurs définis dans un tableau de séquence facilement modifiable.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Exemple de séquence : chaque étape représente une variation d’intensité dans le temps
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> AnimationStep sequence[] <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Exemple de séquence : chaque étape représente une variation d’intensité dans le temps
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> AnimationStep sequence[] <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">2.0</span>},   <span style="color:#75715e">// Monter à 20% sur 2 secondes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>},    <span style="color:#75715e">// Redescendre à 0% sur 2 secondes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">2.0</span>},   <span style="color:#75715e">// Monter à 50% sur 2 secondes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>},    <span style="color:#75715e">// Revenir à 0%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">3.0</span>},  <span style="color:#75715e">// Monter à 100% sur 3 secondes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">3.0</span>},  <span style="color:#75715e">// Rester à 100% pendant 3 secondes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">2.0</span>},   <span style="color:#75715e">// Descendre à 20%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2.0</span>},  <span style="color:#75715e">// Rebond à 100%
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>}     <span style="color:#75715e">// Retour au noir
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>},    <span style="color:#75715e">// Redescendre à 0% sur 2 secondes
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">2.0</span>},   <span style="color:#75715e">// Monter à 50% sur 2 secondes
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>},    <span style="color:#75715e">// Revenir à 0%
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">3.0</span>},  <span style="color:#75715e">// Monter à 100% sur 3 secondes
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">3.0</span>},  <span style="color:#75715e">// Rester à 100% pendant 3 secondes
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">2.0</span>},   <span style="color:#75715e">// Descendre à 20%
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2.0</span>},  <span style="color:#75715e">// Rebond à 100%
+</span></span></span><span style="display:flex;"><span>  {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2.0</span>}     <span style="color:#75715e">// Retour au noir
+</span></span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div><p>La séquence peut donc être modifiée par l&rsquo;utilisateur indépendamment du firmware principal, ce qui simplifie les ajustements sans toucher au code système.</p>
 <hr>
 <h3 id="un-objet-de-scène-sur-mesure">Un objet de scène sur mesure</h3>
@@ -183,7 +186,8 @@
 <li><strong>Onshape</strong></li>
 <li><strong>OrcaSlicer</strong></li>
 <li><strong>VSCode / Arduino</strong></li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <hr>
 <blockquote>
 <h4 id="technologies">Technologies</h4>
@@ -191,7 +195,8 @@
 <li><strong>Impression 3D FDM</strong></li>
 <li><strong>Impression 3D Résine</strong></li>
 <li><strong>Programmation embarquée (Arduino)</strong></li>
-</ul></blockquote>
+</ul>
+</blockquote>
          
       </div>
     </div>
