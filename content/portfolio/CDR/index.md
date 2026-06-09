@@ -1,6 +1,6 @@
 +++
 draft = false
-image = "img/portfolio/CDR/match_cdr_2023.jpg"
+image = "portfolio/cdr/match_cdr_2023.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Coupe de France de Robotique"
 weight = 1.5
