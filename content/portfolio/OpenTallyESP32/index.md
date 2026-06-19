@@ -12,7 +12,7 @@ Boîtiers lumineux sans fil pour indiquer aux caméramans si leur caméra est en
 
 ---
 
-![side](side.jpg)
+{{< mediagrid src="side.jpg" alt="Boîtier OpenTally" >}}
 
 ## Contexte
 
@@ -29,7 +29,7 @@ Pour cette production, l'équipe technique d'orKs avait déjà mis en place un *
 
 Chaque unité se monte sur l'attache griffe d'une caméra et communique en Wi-Fi avec un serveur central. Deux LEDs à l'arrière sont visibles par le caméraman, une troisième à l'avant est tournée vers le sujet filmé.
 
-![Front and Back](Front_Back.jpg)
+{{< mediagrid src="Front_Back.jpg" alt="Face avant et arrière" >}}
 
 L'électronique repose sur un **XIAO ESP32-C3**, choisi pour sa taille compacte et son Wi-Fi intégré. J'ai conçu un **PCB dédié sous KiCad** pour loger l'ensemble proprement, avec une lecture de tension batterie et un bouton multifonction.
 
@@ -38,7 +38,7 @@ L'électronique repose sur un **XIAO ESP32-C3**, choisi pour sa taille compacte 
 
 J'ai fabriqué ce circuit grâce a un Laser Fibre Xtool F2 Ultra.
 
-{{< image2 src="CUT.gif" alt="Gravure laser" src2="PCB_Off_Side.jpg" alt2="PCB" >}}
+{{< mediagrid src="CUT.gif" alt="Gravure laser" src2="PCB_Off_Side.jpg" alt2="PCB" >}}
 
 ---
 

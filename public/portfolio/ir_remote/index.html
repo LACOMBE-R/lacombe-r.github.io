@@ -112,16 +112,438 @@ Dans l&rsquo;idée, je souhaitais pouvoir contrôler mon ampli grâce à des <st
 </blockquote>
 <p>Pour cela, j&rsquo;ai entamé une importante phase de <strong>recherche</strong> : La seule manière de contrôler l&rsquo;ampli à distance est une <strong>télécommande</strong>, que je ne souhaitais pas acheter (beaucoup plus sympa de construire la mienne !). J&rsquo;ai déterminé qu&rsquo;il était possible de <strong>simuler une télécommande</strong> en utilisant une simple <strong>LED infrarouge</strong> connectée à un <strong>micro-contrôleur</strong> (ici un ESP-01).</p>
 <p>Il a ensuite fallu déterminer les codes à émettre pour chacune des touches dont j&rsquo;avais besoin. Je m&rsquo;en suis sorti grâce à la vaste librairie d&rsquo;un <strong>projet open-source</strong> visant à recenser tous les codes infrarouges de commande en fonction des constructeurs (<strong><a href="https://www.lirc.org"  target="_blank" rel="noopener" >LIRC</a></strong>).</p>
-<p>La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C&rsquo;est encore une fois l&rsquo;open source qui me sauve ! Le projet <strong><a href="https://tasmota.github.io/docs/"  target="_blank" rel="noopener" >Tasmota</a></strong> est un firmware modulaire et très facile d&rsquo;installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d&rsquo;une <strong>LED infrarouge</strong>, ainsi qu&rsquo;une passerelle simplifiée avec <strong>Home Assistant</strong>.</p>
+<p>La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C&rsquo;est encore une fois l&rsquo;open source qui me sauve ! Le projet <strong>Tasmota</strong> est un firmware modulaire et très facile d&rsquo;installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d&rsquo;une <strong>LED infrarouge</strong>, ainsi qu&rsquo;une passerelle simplifiée avec <strong>Home Assistant</strong>.</p>
+
+
+<a href="https://github.com/arendst/Tasmota" target="_blank" rel="noopener" class="gh-card-anchor">
+  <img src="https://opengraph.github.com/repo/arendst/Tasmota" alt="arendst/Tasmota" class="gh-card-img">
+</a>
+
+<style>
+  .gh-card-anchor {
+    display: block;
+    max-width: 480px;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d0d7de;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .gh-card-anchor:hover {
+    border-color: #0969da;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+  .gh-card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
 <hr>
 <p>Après le prototypage, j&rsquo;ai souhaité aller plus loin en m&rsquo;essayant au <strong>fraisage de PCB</strong> (circuit imprimé).
 Une fois mon schéma électronique établi et routé depuis le logiciel KiCad :</p>
-<p><img src="PCB(1).png" alt="PCB">
-<img src="PCB(2).png" alt="PCB"></p>
+
+
+
+
+
+
+
+
+<style>
+  .mediagrid {
+    display: flex;
+    gap: 4px;
+  }
+  .mediagrid-item {
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    .mediagrid { flex-direction: column; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: auto; display: block; }
+  }
+  @media (min-width: 768px) {
+    .mediagrid { flex-direction: row; aspect-ratio: 16 / 9; }
+    .mediagrid-item { flex: 1; min-width: 0; height: 100%; overflow: hidden; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: 100%; object-fit: contain; display: block; }
+  }
+
+  #mg-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal.mg-open { display: flex; }
+  #mg-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  #mg-modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal-content img,
+  #mg-modal-content video {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    display: block;
+  }
+  #mg-modal-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #mg-modal-close:hover { opacity: 1; }
+</style>
+
+<div class="mediagrid">
+  
+  
+  
+  <div class="mediagrid-item" data-src="PCB%281%29.png" data-type="image">
+    
+      <img src="PCB%281%29.png" alt="Schéma PCB">
+    
+  </div>
+  
+  
+  
+  <div class="mediagrid-item" data-src="PCB%282%29.png" data-type="image">
+    
+      <img src="PCB%282%29.png" alt="Routage PCB">
+    
+  </div>
+  
+</div>
+
+<script>
+(function () {
+  if (!document.getElementById('mg-modal')) {
+    const modal = document.createElement('div');
+    modal.id = 'mg-modal';
+    modal.innerHTML =
+      '<div id="mg-modal-backdrop"></div>' +
+      '<div id="mg-modal-content"><button id="mg-modal-close">✕</button></div>';
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.classList.remove('mg-open');
+      const content = document.getElementById('mg-modal-content');
+      const video = content.querySelector('video');
+      if (video) video.pause();
+      content.querySelectorAll('img, video').forEach(el => el.remove());
+      ['mg-modal-prev', 'mg-modal-next', 'mg-modal-dots'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    };
+
+    document.getElementById('mg-modal-backdrop').addEventListener('click', close);
+    document.getElementById('mg-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  }
+
+  document.querySelectorAll('.mediagrid-item:not([data-mg])').forEach(item => {
+    item.setAttribute('data-mg', '1');
+    item.addEventListener('click', () => {
+      const src = item.dataset.src;
+      const isVideo = item.dataset.type === 'video';
+      const content = document.getElementById('mg-modal-content');
+      const el = document.createElement(isVideo ? 'video' : 'img');
+      el.src = src;
+      if (isVideo) { el.controls = true; el.autoplay = true; }
+      content.appendChild(el);
+      document.getElementById('mg-modal').classList.add('mg-open');
+    });
+  });
+})();
+</script>
+
 <p>Après quelques modifications, j&rsquo;utilise une fraiseuse du <strong><a href="https://makerspace-amiens.fr"  target="_blank" rel="noopener" >MakerSpace</a></strong> de l&rsquo;école.</p>
-<p><img src="2023-07-21-14-45-49.png" alt="PCB">
-<img src="2023-07-21-14-45-56.png" alt="PCB">
-<img src="2023-07-21-14-46-02.png" alt="PCB"></p>
+
+
+
+
+
+
+
+
+<style>
+  .mediagrid {
+    display: flex;
+    gap: 4px;
+  }
+  .mediagrid-item {
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    .mediagrid { flex-direction: column; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: auto; display: block; }
+  }
+  @media (min-width: 768px) {
+    .mediagrid { flex-direction: row; aspect-ratio: 16 / 9; }
+    .mediagrid-item { flex: 1; min-width: 0; height: 100%; overflow: hidden; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: 100%; object-fit: contain; display: block; }
+  }
+
+  #mg-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal.mg-open { display: flex; }
+  #mg-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  #mg-modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal-content img,
+  #mg-modal-content video {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    display: block;
+  }
+  #mg-modal-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #mg-modal-close:hover { opacity: 1; }
+</style>
+
+<div class="mediagrid">
+  
+  
+  
+  <div class="mediagrid-item" data-src="2023-07-21-14-45-49.png" data-type="image">
+    
+      <img src="2023-07-21-14-45-49.png" alt="Fraisage PCB 1">
+    
+  </div>
+  
+  
+  
+  <div class="mediagrid-item" data-src="2023-07-21-14-45-56.png" data-type="image">
+    
+      <img src="2023-07-21-14-45-56.png" alt="Fraisage PCB 2">
+    
+  </div>
+  
+</div>
+
+<script>
+(function () {
+  if (!document.getElementById('mg-modal')) {
+    const modal = document.createElement('div');
+    modal.id = 'mg-modal';
+    modal.innerHTML =
+      '<div id="mg-modal-backdrop"></div>' +
+      '<div id="mg-modal-content"><button id="mg-modal-close">✕</button></div>';
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.classList.remove('mg-open');
+      const content = document.getElementById('mg-modal-content');
+      const video = content.querySelector('video');
+      if (video) video.pause();
+      content.querySelectorAll('img, video').forEach(el => el.remove());
+      ['mg-modal-prev', 'mg-modal-next', 'mg-modal-dots'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    };
+
+    document.getElementById('mg-modal-backdrop').addEventListener('click', close);
+    document.getElementById('mg-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  }
+
+  document.querySelectorAll('.mediagrid-item:not([data-mg])').forEach(item => {
+    item.setAttribute('data-mg', '1');
+    item.addEventListener('click', () => {
+      const src = item.dataset.src;
+      const isVideo = item.dataset.type === 'video';
+      const content = document.getElementById('mg-modal-content');
+      const el = document.createElement(isVideo ? 'video' : 'img');
+      el.src = src;
+      if (isVideo) { el.controls = true; el.autoplay = true; }
+      content.appendChild(el);
+      document.getElementById('mg-modal').classList.add('mg-open');
+    });
+  });
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+  .mediagrid {
+    display: flex;
+    gap: 4px;
+  }
+  .mediagrid-item {
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    .mediagrid { flex-direction: column; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: auto; display: block; }
+  }
+  @media (min-width: 768px) {
+    .mediagrid { flex-direction: row; aspect-ratio: 16 / 9; }
+    .mediagrid-item { flex: 1; min-width: 0; height: 100%; overflow: hidden; }
+    .mediagrid-item img,
+    .mediagrid-item video { width: 100%; height: 100%; object-fit: contain; display: block; }
+  }
+
+  #mg-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal.mg-open { display: flex; }
+  #mg-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  #mg-modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal-content img,
+  #mg-modal-content video {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    display: block;
+  }
+  #mg-modal-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #mg-modal-close:hover { opacity: 1; }
+</style>
+
+<div class="mediagrid">
+  
+  
+  
+  <div class="mediagrid-item" data-src="2023-07-21-14-46-02.png" data-type="image">
+    
+      <img src="2023-07-21-14-46-02.png" alt="Fraisage PCB 3">
+    
+  </div>
+  
+</div>
+
+<script>
+(function () {
+  if (!document.getElementById('mg-modal')) {
+    const modal = document.createElement('div');
+    modal.id = 'mg-modal';
+    modal.innerHTML =
+      '<div id="mg-modal-backdrop"></div>' +
+      '<div id="mg-modal-content"><button id="mg-modal-close">✕</button></div>';
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.classList.remove('mg-open');
+      const content = document.getElementById('mg-modal-content');
+      const video = content.querySelector('video');
+      if (video) video.pause();
+      content.querySelectorAll('img, video').forEach(el => el.remove());
+      ['mg-modal-prev', 'mg-modal-next', 'mg-modal-dots'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    };
+
+    document.getElementById('mg-modal-backdrop').addEventListener('click', close);
+    document.getElementById('mg-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  }
+
+  document.querySelectorAll('.mediagrid-item:not([data-mg])').forEach(item => {
+    item.setAttribute('data-mg', '1');
+    item.addEventListener('click', () => {
+      const src = item.dataset.src;
+      const isVideo = item.dataset.type === 'video';
+      const content = document.getElementById('mg-modal-content');
+      const el = document.createElement(isVideo ? 'video' : 'img');
+      el.src = src;
+      if (isVideo) { el.controls = true; el.autoplay = true; }
+      content.appendChild(el);
+      document.getElementById('mg-modal').classList.add('mg-open');
+    });
+  });
+})();
+</script>
+
 <p>Une fois le circuit assemblé et soudé, je dessine et imprime en 3D un <strong>boîtier</strong> pour y disposer le PCB. La <strong>LED infrarouge</strong> sera finalement disposée au bout d&rsquo;un câble jack afin de pouvoir être déportée de manière discrète au devant de l&rsquo;ampli.
 Je peux maintenant contrôler mon ampli depuis mon tableau de bord <strong><a href="https://www.home-assistant.io"  target="_blank" rel="noopener" >Home Assistant</a></strong> ou bien directement depuis la plateforme Google Home !</p>
 <h3></h3>

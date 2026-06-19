@@ -18,7 +18,7 @@ En 2020, peu avant la période du COVID, j'ai souhaité ajouter le fraisage à c
 
 ---
 
-![RSCNC-32](Presentation-1024x682.jpg)
+{{< mediagrid src="Presentation-1024x682.jpg" alt="RSCNC-32" >}}
 
 ---
 

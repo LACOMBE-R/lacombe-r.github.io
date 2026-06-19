@@ -16,7 +16,7 @@ Accessoire lumineux conçu sur mesure pour la scène, mêlant électronique emba
 
 Dans le cadre de mon auto-entreprise, et à la demande des **French Twins**, duo de magiciens et consultants en effets d'illusion, j’ai conçu un **collier lumineux interactif** pour la scénographie d’une comédie musicale. Une pierre inerte en apparence, renfermant des LED haute puissance controlées par un boitier accroché à la ceinture.
 
-![Collier lumineux](Icon.gif)
+{{< mediagrid src="Icon.gif" alt="Collier lumineux" >}}
 
 ---
 
@@ -26,14 +26,11 @@ Le système repose sur une architecture compacte autour d’un **XIAO ESP32-C3**
 
 L’ensemble est organisé autour de trois éléments :
 
->- une **pierre imprimée en résine translucide** abritant la matrice LED et un bouton dissimulé à l'arrière,  
+>- une **pierre imprimée en résine translucide** abritant la matrice LED et un bouton dissimulé à l’arrière,  
 >- un **faux collier** intégrant les fils d’alimentation de manière invisible,  
-
-![Bouton](switch.jpg)  
-
 >- une **boîte de contrôle ceinture**, contenant l’électronique et la batterie,  
 
-![Boitier](BOX.gif)  
+{{< mediagrid src="switch.jpg" alt="Bouton" src2="BOX.gif" alt2="Boitier" >}}  
 
 ---
 
@@ -50,9 +47,7 @@ Pour répondre aux contraintes d’usage scénique (fiabilité, discrétion, enc
 
 #### Premiers tests :
 
-![Premiers tests](FIRST_TEST.gif)
-
-![PCB](PCB.png)
+{{< mediagrid src="FIRST_TEST.gif" alt="Premiers tests" src2="PCB.png" alt2="PCB" >}}
 
 ---
 

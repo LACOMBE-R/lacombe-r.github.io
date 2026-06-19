@@ -27,7 +27,7 @@ Après une phase de mesure, j'ai pris de **nombreuses photos**, qui me serviront
 Le plus gros défi pour moi a été d'imaginer un **assemblage mécanique compact** et **élégant** permettant d'animer la phalange synthétique.
 Suite à pas mal de recherches, c'est pour un mécanisme à **4 barres croisées** que j'ai opté :
 
-![Animation 4-bar mechanism](X4bar.gif)
+{{< mediagrid src="X4bar.gif" alt="Animation mécanisme 4 barres" >}}
 
 Bien sûr, il faut un peu d'imagination, mais cela est plus clair lorsque que l'on positionne ce mécanisme en contexte.
 
@@ -40,7 +40,7 @@ Bien sûr, il faut un peu d'imagination, mais cela est plus clair lorsque que l'
 Plusieurs itérations ont été nécessaires pour s'adapter au mieux au doigt d'Adrien.
 Ce processus a été accéléré grâce à l'impression 3D. La prothèse sera finalement imprimée en résine pour plus de confort et d'esthétique.
 
-{{< video src="prostetic.mp4" title="Vidéo démo prothèse" >}}
+{{< mediagrid src="prostetic.mp4" alt="Vidéo démo prothèse" controls="true" >}}
 
 ---
 

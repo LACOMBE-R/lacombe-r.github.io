@@ -16,7 +16,7 @@ Animateur pour les 8-11 ans
 
 Les **Scouts et Guides de France** sont un mouvement de jeunesse et d'éducation populaire ouvert à tous qui vise à accompagner les enfants et les jeunes dans leur développement personnel, en favorisant l'apprentissage par l'aventure, l'action, les valeurs de solidarité, et la responsabilité citoyenne. Ils encouragent ainsi la formation de citoyens engagés et épanouis.
 
-![Alt text](bridge.png)
+{{< mediagrid src="bridge.png" alt="Scouts et Guides de France" >}}
 
 ---
 

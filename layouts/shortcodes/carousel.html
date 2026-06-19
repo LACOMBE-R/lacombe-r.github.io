@@ -4,6 +4,7 @@
 {{ $height := .Get "height" }}
 {{ $unit := .Get "unit" }}
 {{ $duration := .Get "duration" }}
+{{ $id := printf "carousel-%d" .Ordinal }}
 {{ $images := slice }}
 
 {{ range readDir (printf "static/%s" $path) }}
@@ -12,10 +13,97 @@
   {{ end }}
 {{ end }}
 
-<div class="carousel" duration="{{ $duration }}">
+<style>
+  .carousel ul li > img { cursor: pointer; }
+
+  #mg-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal.mg-open { display: flex; }
+  #mg-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  #mg-modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal-content img,
+  #mg-modal-content video {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    display: block;
+  }
+  #mg-modal-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #mg-modal-close:hover { opacity: 1; }
+  #mg-modal-prev, #mg-modal-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.6;
+    padding: 0 1rem;
+    user-select: none;
+  }
+  #mg-modal-prev:hover, #mg-modal-next:hover { opacity: 1; }
+  #mg-modal-prev { left: 0; }
+  #mg-modal-next { right: 0; }
+  #mg-modal-dots {
+    display: none;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    gap: 8px;
+    align-items: center;
+  }
+  .mg-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .mg-dot.mg-dot--active { background: #fff; }
+</style>
+
+<div id="{{ $id }}" class="carousel" duration="{{ $duration }}">
   <ul>
     {{ range $index, $img := $images }}
-    <li id="slide{{ add $index 1 }}"
+    <li id="{{ $id }}-slide{{ add $index 1 }}"
         style="min-width: calc(100%/{{ $items }}); padding-bottom: {{ $height }}{{ $unit }};">
       <img src="{{ $img | absURL }}" alt="">
     </li>
@@ -24,10 +112,111 @@
 
   <ol>
     {{ range $index, $_ := $images }}
-    <li><a href="#slide{{ add $index 1 }}"></a></li>
+    <li><a href="#{{ $id }}-slide{{ add $index 1 }}"></a></li>
     {{ end }}
   </ol>
 
   <div class="prev">&lsaquo;</div>
   <div class="next">&rsaquo;</div>
 </div>
+
+<script>
+(function () {
+  const carouselEl = document.getElementById('{{ $id }}');
+  const srcs = Array.from(carouselEl.querySelectorAll('ul li img')).map(img => img.src);
+  let current = 0;
+
+  /* ── Modal (created once, shared with mediagrid) ── */
+  if (!document.getElementById('mg-modal')) {
+    const m = document.createElement('div');
+    m.id = 'mg-modal';
+    m.innerHTML =
+      '<div id="mg-modal-backdrop"></div>' +
+      '<div id="mg-modal-content"><button id="mg-modal-close">✕</button></div>' +
+      '<button id="mg-modal-prev">‹</button>' +
+      '<button id="mg-modal-next">›</button>' +
+      '<div id="mg-modal-dots"></div>';
+    document.body.appendChild(m);
+
+    const closeModal = () => {
+      m.classList.remove('mg-open');
+      const content = document.getElementById('mg-modal-content');
+      const video = content.querySelector('video');
+      if (video) video.pause();
+      content.querySelectorAll('img, video').forEach(el => el.remove());
+      document.getElementById('mg-modal-prev').style.display = 'none';
+      document.getElementById('mg-modal-next').style.display = 'none';
+      document.getElementById('mg-modal-dots').style.display = 'none';
+    };
+
+    document.getElementById('mg-modal-backdrop').addEventListener('click', closeModal);
+    document.getElementById('mg-modal-close').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  }
+
+  /* ── If modal was created by mediagrid (no nav elements yet), add them ── */
+  if (!document.getElementById('mg-modal-prev')) {
+    const modal = document.getElementById('mg-modal');
+    const prev = document.createElement('button'); prev.id = 'mg-modal-prev'; prev.innerHTML = '‹';
+    const next = document.createElement('button'); next.id = 'mg-modal-next'; next.innerHTML = '›';
+    const dots = document.createElement('div');    dots.id = 'mg-modal-dots';
+    modal.appendChild(prev); modal.appendChild(next); modal.appendChild(dots);
+  }
+
+  /* ── Show image at index ── */
+  function showAt(i) {
+    current = (i + srcs.length) % srcs.length;
+    const content = document.getElementById('mg-modal-content');
+    content.querySelectorAll('img, video').forEach(el => el.remove());
+    const img = document.createElement('img');
+    img.src = srcs[current];
+    content.appendChild(img);
+
+    document.querySelectorAll('.mg-dot').forEach((dot, j) => {
+      dot.classList.toggle('mg-dot--active', j === current);
+    });
+  }
+
+  /* ── Open modal for this carousel ── */
+  function openAt(i) {
+    const prevBtn = document.getElementById('mg-modal-prev');
+    const nextBtn = document.getElementById('mg-modal-next');
+    const dotsEl  = document.getElementById('mg-modal-dots');
+
+    /* Build dots */
+    dotsEl.innerHTML = '';
+    srcs.forEach((_, j) => {
+      const dot = document.createElement('div');
+      dot.className = 'mg-dot' + (j === i ? ' mg-dot--active' : '');
+      dot.addEventListener('click', () => showAt(j));
+      dotsEl.appendChild(dot);
+    });
+
+    /* Wire arrows to this carousel */
+    prevBtn.onclick = () => showAt(current - 1);
+    nextBtn.onclick = () => showAt(current + 1);
+
+    /* Arrow-key navigation (replace previous handler) */
+    if (document._mgKeyNav) document.removeEventListener('keydown', document._mgKeyNav);
+    document._mgKeyNav = e => {
+      if (!document.getElementById('mg-modal').classList.contains('mg-open')) return;
+      if (e.key === 'ArrowLeft')  showAt(current - 1);
+      if (e.key === 'ArrowRight') showAt(current + 1);
+    };
+    document.addEventListener('keydown', document._mgKeyNav);
+
+    prevBtn.style.display = 'block';
+    nextBtn.style.display = 'block';
+    dotsEl.style.display  = 'flex';
+
+    showAt(i);
+    document.getElementById('mg-modal').classList.add('mg-open');
+  }
+
+  /* ── Wire carousel images ── */
+  carouselEl.querySelectorAll('ul li img').forEach((img, i) => {
+    img.setAttribute('data-mg', '1');
+    img.addEventListener('click', () => openAt(i));
+  });
+})();
+</script>

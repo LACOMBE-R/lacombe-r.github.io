@@ -27,7 +27,11 @@ C’est dans cette optique qu’est né **OTTO-MKS**, un robot éducatif à cons
 
 OTTO-MKS est une version repensée du robot open-source [OTTO DIY](https://www.ottodiy.com/), adaptée aux contraintes d’un usage académique et modernisé pour intégrer de nouvelles fonctionnalités.  
 
-![OTTO DIY](Otto-MKS.jpg)
+---
+
+{{< mediagrid src="Otto-MKS.jpg" alt="OTTO-MKS" >}}
+
+---
 
 Le projet propose aux étudiants une **expérience complète et concrète** : conception 3D, prototypage électronique, assemblage, programmation et personnalisation.
 
@@ -48,7 +52,7 @@ Chaque robot fonctionne avec :
 L’électronique repose sur une **carte conçue sur mesure** par mon collègue et ami **Adrien Bracq**.
 La structure mécanique est **entièrement modélisée sous OnShape**, ce qui permet aux étudiants de la modifier librement.
 
-![OTTO_MKS éclaté](Otto-MKS-Exploded.png)
+{{< mediagrid src="Otto-MKS-Exploded.png" alt="OTTO-MKS vue éclatée" >}}
 
 ---
 
@@ -68,7 +72,7 @@ Les étudiants y trouvent :
 
 Le tout illustré par mes soins, grâce a des exports d'OnShape, et un passage sous **InkScape** pour rendre tout ça **attrayant** et **ludique** !
 
-{{< image16x9 src="fight.png" alt="Illustrations InkScape" >}}
+{{< mediagrid src="fight.png" alt="Illustrations InkScape" >}}
 
 
 ---
@@ -87,7 +91,7 @@ Chaque équipe peut ensuite modifier son robot pour participer aux **Ottolympiad
 
 > Certains robots ont pris l’apparence de personnages de fiction, d'autres ont été rééquilibrés, renforcés ou dotés de bras articulés.
 
-![Robots modifiés](Otto-MKS-Mods.png)
+{{< mediagrid src="Otto-MKS-Mods.png" alt="Robots modifiés par les étudiants" >}}
 
 ---
 
@@ -100,7 +104,7 @@ Une série de trois épreuves créatives, dont le réglement est disponible sur 
 
 Ici, la finale de Otto Sumo !
 
-{{< video src="SUMO.mp4" title="Demo" no-sound="false">}}
+{{< mediagrid src="SUMO.mp4" alt="Demo" controls="true" >}}
 
 ---
 

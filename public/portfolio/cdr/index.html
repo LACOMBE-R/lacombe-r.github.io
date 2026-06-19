@@ -112,9 +112,6 @@
 
 
 
-  
-    
-  
 
   
     
@@ -156,61 +153,152 @@
     
   
 
+  
+    
+  
 
-<div class="carousel" duration="3000">
+
+<style>
+  .carousel ul li > img { cursor: pointer; }
+
+  #mg-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal.mg-open { display: flex; }
+  #mg-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+  }
+  #mg-modal-content {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mg-modal-content img,
+  #mg-modal-content video {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    display: block;
+  }
+  #mg-modal-close {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #mg-modal-close:hover { opacity: 1; }
+  #mg-modal-prev, #mg-modal-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.6;
+    padding: 0 1rem;
+    user-select: none;
+  }
+  #mg-modal-prev:hover, #mg-modal-next:hover { opacity: 1; }
+  #mg-modal-prev { left: 0; }
+  #mg-modal-next { right: 0; }
+  #mg-modal-dots {
+    display: none;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    gap: 8px;
+    align-items: center;
+  }
+  .mg-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .mg-dot.mg-dot--active { background: #fff; }
+</style>
+
+<div id="carousel-0" class="carousel" duration="3000">
   <ul>
     
-    <li id="slide1"
+    <li id="carousel-0-slide1"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%280%29.jpg" alt="">
     </li>
     
-    <li id="slide2"
+    <li id="carousel-0-slide2"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%281%29.jpg" alt="">
     </li>
     
-    <li id="slide3"
+    <li id="carousel-0-slide3"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%2810%29.jpg" alt="">
     </li>
     
-    <li id="slide4"
+    <li id="carousel-0-slide4"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%2811%29.png" alt="">
     </li>
     
-    <li id="slide5"
+    <li id="carousel-0-slide5"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%282%29.jpg" alt="">
     </li>
     
-    <li id="slide6"
+    <li id="carousel-0-slide6"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%283%29.jpg" alt="">
     </li>
     
-    <li id="slide7"
+    <li id="carousel-0-slide7"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%285%29.jpg" alt="">
     </li>
     
-    <li id="slide8"
+    <li id="carousel-0-slide8"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%286%29.jpg" alt="">
     </li>
     
-    <li id="slide9"
+    <li id="carousel-0-slide9"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%287%29.jpg" alt="">
     </li>
     
-    <li id="slide10"
+    <li id="carousel-0-slide10"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%288%29.jpg" alt="">
     </li>
     
-    <li id="slide11"
+    <li id="carousel-0-slide11"
         style="min-width: calc(100%/1); padding-bottom: 75%;">
       <img src="http://localhost:1313/img/portfolio/CDR/CDR_CAROUSEL/carrousel_cdr%20%289%29.jpg" alt="">
     </li>
@@ -219,33 +307,134 @@
 
   <ol>
     
-    <li><a href="#slide1"></a></li>
+    <li><a href="#carousel-0-slide1"></a></li>
     
-    <li><a href="#slide2"></a></li>
+    <li><a href="#carousel-0-slide2"></a></li>
     
-    <li><a href="#slide3"></a></li>
+    <li><a href="#carousel-0-slide3"></a></li>
     
-    <li><a href="#slide4"></a></li>
+    <li><a href="#carousel-0-slide4"></a></li>
     
-    <li><a href="#slide5"></a></li>
+    <li><a href="#carousel-0-slide5"></a></li>
     
-    <li><a href="#slide6"></a></li>
+    <li><a href="#carousel-0-slide6"></a></li>
     
-    <li><a href="#slide7"></a></li>
+    <li><a href="#carousel-0-slide7"></a></li>
     
-    <li><a href="#slide8"></a></li>
+    <li><a href="#carousel-0-slide8"></a></li>
     
-    <li><a href="#slide9"></a></li>
+    <li><a href="#carousel-0-slide9"></a></li>
     
-    <li><a href="#slide10"></a></li>
+    <li><a href="#carousel-0-slide10"></a></li>
     
-    <li><a href="#slide11"></a></li>
+    <li><a href="#carousel-0-slide11"></a></li>
     
   </ol>
 
   <div class="prev">&lsaquo;</div>
   <div class="next">&rsaquo;</div>
 </div>
+
+<script>
+(function () {
+  const carouselEl = document.getElementById('carousel-0');
+  const srcs = Array.from(carouselEl.querySelectorAll('ul li img')).map(img => img.src);
+  let current = 0;
+
+   
+  if (!document.getElementById('mg-modal')) {
+    const m = document.createElement('div');
+    m.id = 'mg-modal';
+    m.innerHTML =
+      '<div id="mg-modal-backdrop"></div>' +
+      '<div id="mg-modal-content"><button id="mg-modal-close">✕</button></div>' +
+      '<button id="mg-modal-prev">‹</button>' +
+      '<button id="mg-modal-next">›</button>' +
+      '<div id="mg-modal-dots"></div>';
+    document.body.appendChild(m);
+
+    const closeModal = () => {
+      m.classList.remove('mg-open');
+      const content = document.getElementById('mg-modal-content');
+      const video = content.querySelector('video');
+      if (video) video.pause();
+      content.querySelectorAll('img, video').forEach(el => el.remove());
+      document.getElementById('mg-modal-prev').style.display = 'none';
+      document.getElementById('mg-modal-next').style.display = 'none';
+      document.getElementById('mg-modal-dots').style.display = 'none';
+    };
+
+    document.getElementById('mg-modal-backdrop').addEventListener('click', closeModal);
+    document.getElementById('mg-modal-close').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  }
+
+   
+  if (!document.getElementById('mg-modal-prev')) {
+    const modal = document.getElementById('mg-modal');
+    const prev = document.createElement('button'); prev.id = 'mg-modal-prev'; prev.innerHTML = '‹';
+    const next = document.createElement('button'); next.id = 'mg-modal-next'; next.innerHTML = '›';
+    const dots = document.createElement('div');    dots.id = 'mg-modal-dots';
+    modal.appendChild(prev); modal.appendChild(next); modal.appendChild(dots);
+  }
+
+   
+  function showAt(i) {
+    current = (i + srcs.length) % srcs.length;
+    const content = document.getElementById('mg-modal-content');
+    content.querySelectorAll('img, video').forEach(el => el.remove());
+    const img = document.createElement('img');
+    img.src = srcs[current];
+    content.appendChild(img);
+
+    document.querySelectorAll('.mg-dot').forEach((dot, j) => {
+      dot.classList.toggle('mg-dot--active', j === current);
+    });
+  }
+
+   
+  function openAt(i) {
+    const prevBtn = document.getElementById('mg-modal-prev');
+    const nextBtn = document.getElementById('mg-modal-next');
+    const dotsEl  = document.getElementById('mg-modal-dots');
+
+     
+    dotsEl.innerHTML = '';
+    srcs.forEach((_, j) => {
+      const dot = document.createElement('div');
+      dot.className = 'mg-dot' + (j === i ? ' mg-dot--active' : '');
+      dot.addEventListener('click', () => showAt(j));
+      dotsEl.appendChild(dot);
+    });
+
+     
+    prevBtn.onclick = () => showAt(current - 1);
+    nextBtn.onclick = () => showAt(current + 1);
+
+     
+    if (document._mgKeyNav) document.removeEventListener('keydown', document._mgKeyNav);
+    document._mgKeyNav = e => {
+      if (!document.getElementById('mg-modal').classList.contains('mg-open')) return;
+      if (e.key === 'ArrowLeft')  showAt(current - 1);
+      if (e.key === 'ArrowRight') showAt(current + 1);
+    };
+    document.addEventListener('keydown', document._mgKeyNav);
+
+    prevBtn.style.display = 'block';
+    nextBtn.style.display = 'block';
+    dotsEl.style.display  = 'flex';
+
+    showAt(i);
+    document.getElementById('mg-modal').classList.add('mg-open');
+  }
+
+   
+  carouselEl.querySelectorAll('ul li img').forEach((img, i) => {
+    img.setAttribute('data-mg', '1');
+    img.addEventListener('click', () => openAt(i));
+  });
+})();
+</script>
 
 <hr>
 <p>📸 : <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&amp;heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAABxiIFkBtblVHnqbpmA1rnSBEohWrMPPLkc&amp;keywords=alexandre%20prouvost&amp;origin=RICH_QUERY_SUGGESTION&amp;position=1&amp;searchId=6f376a2d-c833-46a8-9358-90f01049af60&amp;sid=kDo&amp;spellCorrectionEnabled=false"  title="Linkedin"  target="_blank" rel="noopener" >Alexandre Prouvost</a></p>
@@ -263,162 +452,153 @@
 <p>Cette vidéo est un <strong>support de communication</strong> que j&rsquo;ai réalisé afin d&rsquo;expliquer le projet à d&rsquo;éventuels sponsors.</p>
 <hr>
 <h3 id="exemple-de-match">Exemple de match</h3>
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-    <iframe src="https://www.youtube.com/embed/PNqFieVEhVM?start=3617"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"
-        title="YouTube Video"></iframe>
+
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://www.youtube.com/embed/PNqFieVEhVM?start=3617"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+    allowfullscreen
+    title="YouTube Video">
+  </iframe>
 </div>
+
 <hr>
 <h3 id="aperçu">Aperçu</h3>
+
+
 <style>
-    html {
-        height: 100%;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    model-viewer {
-        width: 100%;
-        height: 90%;
-        background-color: #ffffff;
-    }
-
-
-    .progress-bar {
-        display: block;
-        width: 33%;
-        height: 10%;
-        max-height: 2%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        border-radius: 25px;
-        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.9);
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .progress-bar.hide {
-        visibility: hidden;
-        transition: visibility 0.3s;
-    }
-
-    .update-bar {
-        background-color: rgba(255, 255, 255, 0.9);
-        width: 0%;
-        height: 100%;
-        border-radius: 25px;
-        float: left;
-        transition: width 0.3s;
-    }
-
-    model-viewer {
-        width: 100%;
-        height: 600px;
-    }
-
-    .HotspotAnnotation {
-        background: rgb(255, 255, 255);
-        border-radius: 4px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;
-        color: rgba(0, 0, 0, 0.8);
-        display: block;
-        font-family: Futura, "Helvetica Neue", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        left: calc(100% + 1em);
-        max-width: 128px;
-        overflow-wrap: normal;
-        padding: 0.5em 1em;
-        position: absolute;
-        top: 50%;
-        width: max-content;
-    }
-
-    .Hotspot {
-        --min-hotspot-opacity: 15;
-        background: rgb(255, 255, 255);
-        border-radius: 32px;
-        border: 0px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;
-        box-sizing: border-box;
-        cursor: pointer;
-        height: 24px;
-        padding: 8px;
-        position: relative;
-        transition: opacity 0.3s ease 0s;
-        width: 24px;
-    }
-
-    #lazy-load-poster {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-image: url("/portfolio/cdr/poster.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    #button-load {
-        background-image: url("../../img/ic_get_app_white_24dp.svg");
-        background-repeat: no-repeat;
-        background-size: 24px 24px;
-        background-position: 6% 50%;
-        background-color: #000;
-        color: white;
-        cursor: pointer;
-        border-radius: 6px;
-        display: inline-block;
-        padding: 10px 18px 9px 40px;
-        font-weight: 500;
-        box-shadow: 0 0 8px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .25);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        z-index: 100;
-    }
+  model-viewer {
+    width: 100%;
+    height: 600px;
+  }
+  .progress-bar {
+    display: block;
+    width: 33%;
+    height: 10%;
+    max-height: 2%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 25px;
+    box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.5), 0px 0px 5px 1px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.9);
+    background-color: rgba(0,0,0,0.5);
+  }
+  .progress-bar.hide {
+    visibility: hidden;
+    transition: visibility 0.3s;
+  }
+  .update-bar {
+    background-color: rgba(255,255,255,0.9);
+    width: 0%;
+    height: 100%;
+    border-radius: 25px;
+    float: left;
+    transition: width 0.3s;
+  }
+  .HotspotAnnotation {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0,0,0,0.25) 0px 2px 4px;
+    color: rgba(0,0,0,0.8);
+    display: block;
+    font-family: Futura, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    left: calc(100% + 1em);
+    max-width: 128px;
+    overflow-wrap: normal;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 50%;
+    width: max-content;
+  }
+  .Hotspot {
+    background: #fff;
+    border-radius: 32px;
+    border: 0;
+    box-shadow: rgba(0,0,0,0.25) 0px 2px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 24px;
+    padding: 8px;
+    position: relative;
+    transition: opacity 0.3s ease 0s;
+    width: 24px;
+  }
+  #lazy-load-poster {
+    position: absolute;
+    inset: 0;
+    background-image: url("/portfolio/cdr/poster.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #button-load {
+    background-image: url("/img/ic_get_app_white_24dp.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 6% 50%;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px 18px 9px 40px;
+    font-weight: 500;
+    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+  }
 </style>
 
-<model-viewer id="lazy-load" class="demo" reveal="manual" disable-zoom src="/models/Base_Roulante_V2.glb" loading="lazy"
-    ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="0"
+
+<model-viewer id="lazy-load" reveal="manual" disable-zoom loading="lazy"
+    src="/models/Base_Roulante_V2.glb"
+    ar ar-modes="webxr scene-viewer quick-look"
+    camera-controls shadow-intensity="0"
     camera-orbit="-179.4deg 146.8deg 0.9606m" field-of-view="30deg" exposure="1.67">
+
     <button class="Hotspot" slot="hotspot-1"
         data-position="-0.02780266472108569m -0.018990535043268014m -0.39261032180950206m"
         data-normal="-0.8180993320198757m -0.5329944923086205m -0.2159406263705581m"
         data-visibility-attribute="visible">
         <div class="HotspotAnnotation">Lidar</div>
-    </button><button class="Hotspot" slot="hotspot-2"
+    </button>
+    <button class="Hotspot" slot="hotspot-2"
         data-position="-0.06481057975523055m -0.15035407687918087m -0.08658890840544695m"
         data-normal="-0.8342115935623374m 0.551444482397082m -6.938893903907228e-18m"
         data-visibility-attribute="visible">
         <div class="HotspotAnnotation">Pinces flexibles</div>
-    </button><button class="Hotspot" slot="hotspot-3"
+    </button>
+    <button class="Hotspot" slot="hotspot-3"
         data-position="-0.00016949138099907335m -0.12733264113992998m -0.2573377401459473m"
         data-normal="-6.591949208711867e-17m 0.9590812788283405m -0.2831308895210749m"
         data-visibility-attribute="visible">
         <div class="HotspotAnnotation">Translation verticale</div>
-    </button><button class="Hotspot" slot="hotspot-4"
+    </button>
+    <button class="Hotspot" slot="hotspot-4"
         data-position="-0.10470596409300187m -0.05738093752809475m 0.0025570252880839743m"
-        data-normal="-0.4297591395972037m -0.1565235162033425m 0.8892735635382474m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Déplacement holonome </div>
-    </button><button class="Hotspot" slot="hotspot-6"
+        data-normal="-0.4297591395972037m -0.1565235162033425m 0.8892735635382474m"
+        data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Déplacement holonome</div>
+    </button>
+    <button class="Hotspot" slot="hotspot-6"
         data-position="0.1388546889598338m -0.08149662385238471m -0.23651337516441756m"
         data-normal="-0.866025403784436m 0.5000000000000043m -6.938893903907227e-18m"
         data-visibility-attribute="visible">
         <div class="HotspotAnnotation">Afficheur</div>
-    </button><button class="Hotspot" slot="hotspot-7"
+    </button>
+    <button class="Hotspot" slot="hotspot-7"
         data-position="-0.10217745737505021m -0.0615623362018726m -0.309000000052154m"
-        data-normal="0m -2.2204460492503136e-16m -1m" data-visibility-attribute="visible">
+        data-normal="0m -2.2204460492503136e-16m -1m"
+        data-visibility-attribute="visible">
         <div class="HotspotAnnotation">Panneau de contrôle</div>
     </button>
 
@@ -427,9 +607,10 @@
 </model-viewer>
 
 <script>
-    document.querySelector('#button-load').addEventListener('click',
-        () => document.querySelector('#lazy-load').dismissPoster());
+  document.querySelector('#button-load').addEventListener('click',
+    () => document.querySelector('#lazy-load').dismissPoster());
 </script>
+
 <hr>
 <p>Cette expérience nous a énormément appris, tant techniquement qu&rsquo;humainement. La coupe est aussi et surtout un événement <strong>convivial</strong> et <strong>bienveillant</strong> tourné vers l&rsquo;<strong>entraide</strong> et le <strong>partage</strong>, en phase avec la <strong>philosophie des Makers</strong> et le <strong>mouvement Open Source</strong>.</p>
 <p>Du point de vue technique, pour les phases de <strong>conception</strong>, <strong>prototypage</strong> et <strong>réalisation</strong>, nous avons eu la chance d&rsquo;avoir accès aux outils et ressources du <strong><a href="https://makerspace-amiens.fr"  target="_blank" rel="noopener" >MakerSpace</a></strong> de notre école.</p>

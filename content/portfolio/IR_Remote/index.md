@@ -24,21 +24,22 @@ Pour cela, j'ai entamé une importante phase de **recherche** : La seule manièr
 
 Il a ensuite fallu déterminer les codes à émettre pour chacune des touches dont j'avais besoin. Je m'en suis sorti grâce à la vaste librairie d'un **projet open-source** visant à recenser tous les codes infrarouges de commande en fonction des constructeurs (**[LIRC](https://www.lirc.org)**).
 
-La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C'est encore une fois l'open source qui me sauve ! Le projet **[Tasmota](https://tasmota.github.io/docs/)** est un firmware modulaire et très facile d'installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d'une **LED infrarouge**, ainsi qu'une passerelle simplifiée avec **Home Assistant**.
+La dernière pièce du puzzle est de connecter mon ESP-01 à mon centre de contrôle domotique. C'est encore une fois l'open source qui me sauve ! Le projet **Tasmota** est un firmware modulaire et très facile d'installation conçu pour la domotique. Il possède, de plus, un module dédié au contrôle d'une **LED infrarouge**, ainsi qu'une passerelle simplifiée avec **Home Assistant**.
+
+{{< github-card repo="arendst/Tasmota" >}}
 
 ---
 
 Après le prototypage, j'ai souhaité aller plus loin en m'essayant au **fraisage de PCB** (circuit imprimé).
 Une fois mon schéma électronique établi et routé depuis le logiciel KiCad :
 
-![PCB](PCB(1).png)
-![PCB](PCB(2).png)
+{{< mediagrid src="PCB(1).png" alt="Schéma PCB" src2="PCB(2).png" alt2="Routage PCB" >}}
 
 Après quelques modifications, j'utilise une fraiseuse du **[MakerSpace](https://makerspace-amiens.fr)** de l'école.
 
-![PCB](2023-07-21-14-45-49.png)
-![PCB](2023-07-21-14-45-56.png)
-![PCB](2023-07-21-14-46-02.png)
+{{< mediagrid src="2023-07-21-14-45-49.png" alt="Fraisage PCB 1" src2="2023-07-21-14-45-56.png" alt2="Fraisage PCB 2">}}
+
+{{< mediagrid src="2023-07-21-14-46-02.png" alt="Fraisage PCB 3" >}}
 
 Une fois le circuit assemblé et soudé, je dessine et imprime en 3D un **boîtier** pour y disposer le PCB. La **LED infrarouge** sera finalement disposée au bout d'un câble jack afin de pouvoir être déportée de manière discrète au devant de l'ampli.
 Je peux maintenant contrôler mon ampli depuis mon tableau de bord **[Home Assistant](https://www.home-assistant.io)** ou bien directement depuis la plateforme Google Home !

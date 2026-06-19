@@ -47,7 +47,7 @@ Cette vidéo est un **support de communication** que j'ai réalisé afin d'expli
 
 ### Exemple de match
 
-{{< youtubetime PNqFieVEhVM 3617 >}}
+{{< youtubetime id="PNqFieVEhVM" start="3617" >}}
 
 ---
 

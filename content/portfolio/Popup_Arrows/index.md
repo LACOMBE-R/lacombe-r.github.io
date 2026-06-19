@@ -34,26 +34,19 @@ Les **bases de flèches** sont imprimées en 3D (PETG) et intègrent :
 
 #### **Premier test du mécanisme**
 
-{{< video src="FIRST_TEST.mp4" title="Premiers tests du mécanisme" no-sound="true">}}  
+Les flèches, achetées dans le commerce et modifiées, s’insèrent dans la base par une **rotation d’un quart de tour**, qui verrouille mécaniquement leur position. Une fois abaissées, elles sont maintenues en tension jusqu’au déclenchement électrique. Un **loqueteau à bille réglable** permet d’atténuer le rebond lors de l’éjection.
 
 ---
 
-Les flèches, achetées dans le commerce et modifiées, s’insèrent dans la base par une **rotation d’un quart de tour**, qui verrouille mécaniquement leur position. Une fois abaissées, elles sont maintenues en tension jusqu’au déclenchement électrique. Un **loqueteau à bille réglable** permet d’atténuer le rebond lors de l’éjection.
+{{< mediagrid src="FIRST_TEST.webp" alt="Premiers tests du mécanisme" src2="Rotate_Lock.webp" alt2="Verouillage de la flèche" >}}
 
-{{< video src="Rotate_Lock.mp4" title="Verouillage de la flèche" no-sound="true">}}  
+---
 
 Les flèches sont surmontées **d’ailerons imprimés en plastique flexible blanc (TPU)**, pour une plus grande durabilité et impact visuel que des plumes réelles.
 
 ---
 
-{{< video
-  src="fins.mp4"
-  title="Ailerons en TPU"
-  no-sound="true"
-  src2="Arrow_Base_Show.mp4"
-  title2="Présentation base"
-  no-sound2="true"
->}}
+{{< mediagrid src="fins.webp" alt="Ailerons en TPU" src2="Arrow_Base_Show.webp" alt2="Présentation base" >}}
 
 ---
 
@@ -61,7 +54,7 @@ Les flèches sont surmontées **d’ailerons imprimés en plastique flexible bla
 
 Les bases sont alimentées via des **fiches audio standard**, offrant une **grande souplesse de longueur** et un **montage rapide** sur scène. Ce choix garantit une connectique robuste, détachable, et facilement remplaçable.
 
-{{< image16x9 src="Audio_Connector.png" alt="Câblage des bases avec fiches audio" >}}
+{{< mediagrid src="Audio_Connector.png" alt="Câblage des bases avec fiches audio" >}}
 
 Chaque base peut être installée indépendamment, avec une longueur de câble adaptée à son emplacement.
 
@@ -73,13 +66,13 @@ Un **hub de contrôle** dédié (similaire a un switchpack) permet de piloter ju
 
 J'ai utilisé pour cela une carte électronique du commerce ainsi qu'une alimentation 12V 30A.
 
-{{< image16x9 src="DMX_Board.png" alt="Carte électronique DMX" >}}
+{{< mediagrid src="DMX_Board.png" alt="Carte électronique DMX" >}}
 
 Le hub est configuré par **DIP switches** pour définir l’adresse de départ, les sorties suivantes étant affectées automatiquement aux canaux consécutifs.
 
 Le tout est integré dans un boitier composé de pièces imprimées et de carters découpés et gravés au laser. Une LED orange signale chaque déclenchement actif.
 
-{{< image16x9 src="DMX_HUB_2.png" alt="Boîtier DMX avec LED" >}}
+{{< mediagrid src="DMX_HUB_2.png" alt="Boîtier DMX avec LED" >}}
 
 ---
 
@@ -87,13 +80,13 @@ Le tout est integré dans un boitier composé de pièces imprimées et de carter
 
 Les bases sont conçues pour être **dissimulées** en position couchée dans un **coffrage scénique frontal**. Lors du déclenchement, les flèches surgissent verticalement, créant l'effet d'une apparition.
 
-{{< image16x9 src="Coffrage.jpg" alt="Coffrage en bois" >}}
+{{< mediagrid src="Coffrage.jpg" alt="Coffrage en bois" >}}
 
 ### Effet
 
 ---
 
-{{< video src="DEMO.mp4" title="Demo" no-sound="true">}}
+{{< mediagrid src="DEMO.webp" alt="Demo" >}}
 
 ---
 
